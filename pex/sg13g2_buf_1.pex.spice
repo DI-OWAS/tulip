@@ -1,0 +1,115 @@
+* sg13g2_buf_1 - Buffer cell (PEX extracted)
+* Converted from Spectre to ngspice SPICE format
+* Pin order: X A VDD VSS
+* 
+* NOTE: sg13_lv_nmos and sg13_lv_pmos are SUBCIRCUITS in IHP PDK
+*       Must use X prefix, not M prefix!
+
+.SUBCKT sg13g2_buf_1 X A VDD VSS
+
+* ===== MOSFET DEVICES (as subcircuit instances) =====
+
+* N1 (\3\:net1 \4\:A \1\:VSS \2\:VSS) sg13_lv_nmos w=5.5e-07 l=1.3e-07 m=1
+XN1 net1_3 A_4 VSS_1 VSS_2 sg13_lv_nmos w=5.5e-07 l=1.3e-07 m=1
+
+* P0 (net1 \2\:A \3\:VDD VDD) sg13_lv_pmos w=8.4e-07 l=1.3e-07 m=1
+XP0 net1 A_2 VDD_3 VDD sg13_lv_pmos w=8.4e-07 l=1.3e-07 m=1
+
+* P1 (\2\:X \4\:net1 \3\:VDD VDD) sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+XP1 X_2 net1_4 VDD_3 VDD sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+
+* N0 (\1\:X \6\:net1 \1\:VSS \2\:VSS) sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+XN0 X_1 net1_6 VSS_1 VSS_2 sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+
+* ===== PARASITIC CAPACITORS =====
+
+* C1 (VDD VSS) capacitor c=4.35479e-17
+C1 VDD VSS 4.35479e-17
+
+* C2 (net1 VSS) capacitor c=2.44214e-18
+C2 net1 VSS 2.44214e-18
+
+* C3 (\6\:net1 VSS) capacitor c=1.86499e-17
+C3 net1_6 VSS 1.86499e-17
+
+* C4 (\4\:A VSS) capacitor c=3.55274e-17
+C4 A_4 VSS 3.55274e-17
+
+* C5 (\4\:net1 VSS) capacitor c=3.1256e-17
+C5 net1_4 VSS 3.1256e-17
+
+* C6 (\2\:A VSS) capacitor c=1.65436e-17
+C6 A_2 VSS 1.65436e-17
+
+* C7 (\2\:net1 VSS) capacitor c=9.18158e-17
+C7 net1_2 VSS 9.18158e-17
+
+* C8 (\1\:A VSS) capacitor c=1.1732e-16
+C8 A_1 VSS 1.1732e-16
+
+* C9 (\2\:X VSS) capacitor c=4.25739e-18
+C9 X_2 VSS 4.25739e-18
+
+* C10 (\3\:VDD VSS) capacitor c=6.1321e-19
+C10 VDD_3 VSS 6.1321e-19
+
+* C11 (\1\:X VSS) capacitor c=5.84304e-18
+C11 X_1 VSS 5.84304e-18
+
+* C12 (\3\:net1 VSS) capacitor c=2.41879e-17
+C12 net1_3 VSS 2.41879e-17
+
+* C13 (\2\:VDD VSS) capacitor c=6.03629e-19
+C13 VDD_2 VSS 6.03629e-19
+
+* ===== PARASITIC RESISTORS =====
+
+* Rg1 (\1\:A A) resistor r=0.00557
+Rg1 A_1 A 0.00557
+
+* Rg2 (net1 \2\:net1) resistor r=8.4378
+Rg2 net1 net1_2 8.4378
+
+* Rg3 (\2\:net1 \3\:net1) resistor r=15.5242
+Rg3 net1_2 net1_3 15.5242
+
+* Rg4 (\1\:X X) resistor r=8.2638
+Rg4 X_1 X 8.2638
+
+* Rg5 (X \2\:X) resistor r=5.066
+Rg5 X X_2 5.066
+
+* Rg6 (VDD \2\:VDD) resistor r=0.0275
+Rg6 VDD VDD_2 0.0275
+
+* Rg7 (\2\:VDD \3\:VDD) resistor r=15.3186
+Rg7 VDD_2 VDD_3 15.3186
+
+* Rg9 (\1\:VSS \3\:VSS) resistor r=15.4087
+Rg9 VSS_1 VSS_3 15.4087
+
+* Rg10 (\3\:VSS VSS) resistor r=0.001084
+Rg10 VSS_3 VSS 0.001084
+
+* Rg11 (\2\:VSS \3\:VSS) resistor r=3.75
+Rg11 VSS_2 VSS_3 3.75
+
+* Rh1 (\2\:A \3\:A) resistor r=8.6702
+Rh1 A_2 A_3 8.6702
+
+* Rh2 (\3\:A \4\:A) resistor r=36.1317
+Rh2 A_3 A_4 36.1317
+
+* Rh3 (\1\:A \3\:A) resistor r=15
+Rh3 A_1 A_3 15
+
+* Rh4 (\4\:net1 \5\:net1) resistor r=16.892
+Rh4 net1_4 net1_5 16.892
+
+* Rh5 (\5\:net1 \6\:net1) resistor r=14.7381
+Rh5 net1_5 net1_6 14.7381
+
+* Rh6 (\2\:net1 \5\:net1) resistor r=15
+Rh6 net1_2 net1_5 15
+
+.ENDS sg13g2_buf_1

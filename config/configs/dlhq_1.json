@@ -1,0 +1,386 @@
+{
+    "global_settings": {
+        "delay_degradation_percent": 10.0,
+        "temp_values": [
+            25
+        ],
+        "vdd_values": [
+            "1.5"
+        ],
+        "clock_slew_ns": [
+            0.0186,
+            0.51636,
+            1.263,
+            2.5074
+        ],
+        "data_slew_ns": [
+            0.0186,
+            0.0966,
+            0.174,
+            0.3294,
+            0.6408,
+            1.263,
+            2.5074
+        ],
+        "output_loads": [
+            "0.001",
+            "0.0234",
+            "0.039",
+            "0.0648",
+            "0.108",
+            "0.18",
+            "0.3"
+        ],
+        "sequential_loads": [
+            "0.05"
+        ],
+        "num_processes": 8,
+        "slew_scale_factor": 1.6667,
+        "sim_timestep_ps": 10,
+        "delay_window_ns": 30,
+        "sim_window_ns": 300,
+        "sim_method": "GEAR",
+        "sim_reltol": 0.005,
+        "sim_abstol": "1n",
+        "sim_vntol": "10u",
+        "sim_itl4": 100,
+        "sim_gmin": "1e-12",
+        "series_damping_ohm": 5,
+        "slew_lower_threshold_pct": 20,
+        "slew_upper_threshold_pct": 80,
+        "delay_threshold_pct": 50,
+        "pulse_start_ns": 5,
+        "pulse_start_preload_ns": 10,
+        "preload_switch_ns": 8.0,
+        "search_after_comb_ns": 4.5,
+        "search_after_settling_ns": 9.5,
+        "search_after_seq_ns": 14.0,
+        "search_after_ref_seq_ns": 14.5,
+        "binary_search_iterations": 8,
+        "sequential_sweep_points": 100,
+        "sequential_sweep_margin_ns": 1.05,
+        "mpw_min_width_ns": 0.02,
+        "mpw_max_width_ns": 5.0,
+        "mpw_sweep_points_fast": 50,
+        "mpw_sweep_points_normal": 100,
+        "mpw_input_threshold": 0.9,
+        "mpw_output_threshold": 0.8,
+        "seq_search_fail_bound_ff": -6.0,
+        "seq_search_pass_bound_ff": 6.0,
+        "seq_search_fail_bound_latch": -1.5,
+        "seq_search_pass_bound_latch": 1.0,
+        "seq_search_fail_bound_hold": -1.0,
+        "seq_search_pass_bound_hold": 4.0,
+        "seq_search_fail_bound_latch_hold": 1.0,
+        "seq_search_pass_bound_latch_hold": -4.0,
+        "seq_search_fail_bound_removal": 1.0,
+        "seq_search_pass_bound_removal": -4.0,
+        "lib_name": "sg13g2_custom_typ_1p50V_25C",
+        "lef_file": "/mnt/c/Users/adars/IHP/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef",
+        "nom_process": 1,
+        "model_lib": "cornerMOSlv.lib",
+        "model_corner": "mos_tt"
+    },
+    "cells": [
+        {
+            "name": "sg13g2_dlhq_1_flat_pex",
+            "spice_model": "sg13g2_dlhq_1_flat",
+            "pin_mapping": "GATE Q VDD VSS D",
+            "has_qn_output": false,
+            "function_mapping": {
+                "data": "D",
+                "output": "Q",
+                "vdd": "VDD",
+                "vss": "VSS"
+            },
+            "arcs": [
+                {
+                    "_group": "MPW (GATE HIGH)",
+                    "name": "mpw_gate_high",
+                    "type": "mpw",
+                    "data_signal": "GATE",
+                    "output_signal": "Q",
+                    "pulse_polarity": "active_high",
+                    "initialization": "set",
+                    "expected_output_transition": "rise",
+                    "static_pins": {
+                        "D": "VDD"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001"
+                    ],
+                    "clock_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ]
+                },
+                {
+                    "_group": "COMBINATIONAL (D -> Q)",
+                    "name": "d_to_q_rise",
+                    "type": "propagation_delay",
+                    "data_signal": "D",
+                    "data_transition": "rise",
+                    "output_signal": "Q",
+                    "expected_output_transition": "rise",
+                    "related_pin": "D",
+                    "timing_type": "combinational",
+                    "timing_sense": "positive_unate",
+                    "static_pins": {
+                        "GATE": "VDD"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "d_to_q_fall",
+                    "type": "propagation_delay",
+                    "data_signal": "D",
+                    "data_transition": "fall",
+                    "output_signal": "Q",
+                    "expected_output_transition": "fall",
+                    "related_pin": "D",
+                    "timing_type": "combinational",
+                    "timing_sense": "positive_unate",
+                    "static_pins": {
+                        "GATE": "VDD"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (GATE -> Q)",
+                    "name": "clk_to_q_rise",
+                    "type": "propagation_delay",
+                    "data_signal": "GATE",
+                    "data_transition": "rise",
+                    "output_signal": "Q",
+                    "expected_output_transition": "rise",
+                    "related_pin": "GATE",
+                    "timing_type": "rising_edge",
+                    "timing_sense": "non_unate",
+                    "initialization": "reset",
+                    "static_pins": {
+                        "D": "VDD"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "clk_to_q_fall",
+                    "type": "propagation_delay",
+                    "data_signal": "GATE",
+                    "data_transition": "rise",
+                    "output_signal": "Q",
+                    "expected_output_transition": "fall",
+                    "related_pin": "GATE",
+                    "timing_type": "rising_edge",
+                    "timing_sense": "non_unate",
+                    "initialization": "set",
+                    "static_pins": {
+                        "D": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "SETUP/HOLD (D -> GATE)",
+                    "name": "setup_D_rise_to_GATE_fall",
+                    "type": "setup_latch",
+                    "liberty_timing_type": "setup_falling",
+                    "related_pin": "GATE",
+                    "gate_signal": "GATE",
+                    "clock_edge": "fall",
+                    "data_signal": "D",
+                    "data_transition": "rise",
+                    "output_signal": "Q",
+                    "expected_output_transition": "rise",
+                    "initialization": "reset",
+                    "static_pins": {},
+                    "clock_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ],
+                    "data_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ]
+                },
+                {
+                    "name": "hold_D_rise_to_GATE_fall",
+                    "type": "hold_latch",
+                    "liberty_timing_type": "hold_falling",
+                    "related_pin": "GATE",
+                    "gate_signal": "GATE",
+                    "clock_edge": "fall",
+                    "data_signal": "D",
+                    "data_transition": "rise",
+                    "output_signal": "Q",
+                    "expected_output_transition": "rise",
+                    "initialization": "reset",
+                    "static_pins": {},
+                    "clock_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ],
+                    "data_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ]
+                },
+                {
+                    "name": "setup_D_fall_to_GATE_fall",
+                    "type": "setup_latch",
+                    "liberty_timing_type": "setup_falling",
+                    "related_pin": "GATE",
+                    "gate_signal": "GATE",
+                    "clock_edge": "fall",
+                    "data_signal": "D",
+                    "data_transition": "fall",
+                    "output_signal": "Q",
+                    "expected_output_transition": "fall",
+                    "initialization": "set",
+                    "static_pins": {},
+                    "clock_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ],
+                    "data_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ]
+                },
+                {
+                    "name": "hold_D_fall_to_GATE_fall",
+                    "type": "hold_latch",
+                    "liberty_timing_type": "hold_falling",
+                    "related_pin": "GATE",
+                    "gate_signal": "GATE",
+                    "clock_edge": "fall",
+                    "data_signal": "D",
+                    "data_transition": "fall",
+                    "output_signal": "Q",
+                    "expected_output_transition": "fall",
+                    "initialization": "set",
+                    "static_pins": {},
+                    "clock_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ],
+                    "data_slew_ns": [
+                        0.0186,
+                        0.51636,
+                        1.263,
+                        2.5074
+                    ]
+                },
+                {
+                    "name": "input_cap_D",
+                    "type": "input_capacitance",
+                    "data_signal": "D",
+                    "output_signal": "Q",
+                    "static_pins": {
+                        "GATE": "0"
+                    },
+                    "_group": "INPUT CAPACITANCE"
+                },
+                {
+                    "name": "input_cap_GATE",
+                    "type": "input_capacitance",
+                    "data_signal": "GATE",
+                    "output_signal": "Q",
+                    "static_pins": {
+                        "D": "0"
+                    },
+                    "_group": "INPUT CAPACITANCE"
+                }
+            ],
+            "cell_type": "latch"
+        }
+    ]
+}

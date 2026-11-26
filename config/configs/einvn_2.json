@@ -1,0 +1,234 @@
+{
+    "global_settings": {
+        "delay_degradation_percent": 10.0,
+        "temp_values": [
+            25
+        ],
+        "vdd_values": [
+            "1.5"
+        ],
+        "clock_slew_ns": [
+            0.0186,
+            0.51636,
+            1.263,
+            2.5074
+        ],
+        "data_slew_ns": [
+            0.0186,
+            0.0966,
+            0.174,
+            0.3294,
+            0.6408,
+            1.263,
+            2.5074
+        ],
+        "output_loads": [
+            "0.001",
+            "0.0234",
+            "0.039",
+            "0.0648",
+            "0.108",
+            "0.18",
+            "0.3"
+        ],
+        "sequential_loads": [
+            "0.05"
+        ],
+        "num_processes": 8,
+        "slew_scale_factor": 1.6667,
+        "sim_timestep_ps": 10,
+        "delay_window_ns": 30,
+        "sim_window_ns": 300,
+        "sim_method": "GEAR",
+        "sim_reltol": 0.005,
+        "sim_abstol": "1n",
+        "sim_vntol": "10u",
+        "sim_itl4": 100,
+        "sim_gmin": "1e-12",
+        "series_damping_ohm": 5,
+        "slew_lower_threshold_pct": 20,
+        "slew_upper_threshold_pct": 80,
+        "delay_threshold_pct": 50,
+        "pulse_start_ns": 5,
+        "pulse_start_preload_ns": 10,
+        "preload_switch_ns": 8.0,
+        "search_after_comb_ns": 4.5,
+        "search_after_settling_ns": 9.5,
+        "search_after_seq_ns": 14.0,
+        "search_after_ref_seq_ns": 14.5,
+        "binary_search_iterations": 8,
+        "sequential_sweep_points": 100,
+        "sequential_sweep_margin_ns": 1.05,
+        "mpw_min_width_ns": 0.02,
+        "mpw_max_width_ns": 5.0,
+        "mpw_sweep_points_fast": 50,
+        "mpw_sweep_points_normal": 100,
+        "mpw_input_threshold": 0.9,
+        "mpw_output_threshold": 0.8,
+        "seq_search_fail_bound_ff": -6.0,
+        "seq_search_pass_bound_ff": 6.0,
+        "seq_search_fail_bound_latch": -1.5,
+        "seq_search_pass_bound_latch": 1.0,
+        "seq_search_fail_bound_hold": -1.0,
+        "seq_search_pass_bound_hold": 4.0,
+        "seq_search_fail_bound_latch_hold": 1.0,
+        "seq_search_pass_bound_latch_hold": -4.0,
+        "seq_search_fail_bound_removal": 1.0,
+        "seq_search_pass_bound_removal": -4.0,
+        "lib_name": "sg13g2_custom_typ_1p50V_25C",
+        "lef_file": "/mnt/c/Users/adars/IHP/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef",
+        "nom_process": 1,
+        "model_lib": "cornerMOSlv.lib",
+        "model_corner": "mos_tt"
+    },
+    "cells": [
+        {
+            "name": "sg13g2_einvn_2_flat_pex",
+            "spice_model": "sg13g2_einvn_2_flat",
+            "pin_mapping": "Z A VSS TE_B VDD",
+            "has_qn_output": false,
+            "function_mapping": {
+                "data": "A",
+                "output": "Z",
+                "vdd": "VDD",
+                "vss": "VSS"
+            },
+            "arcs": [
+                {
+                    "name": "cell_rise_A",
+                    "type": "propagation_delay",
+                    "data_signal": "A",
+                    "data_transition": "fall",
+                    "output_signal": "Z",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "TE_B": "VSS"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.00599856",
+                        "0.0517986",
+                        "0.0829986",
+                        "0.134599",
+                        "0.220999",
+                        "0.364999",
+                        "0.604999"
+                    ]
+                },
+                {
+                    "name": "cell_fall_A",
+                    "type": "propagation_delay",
+                    "data_signal": "A",
+                    "data_transition": "rise",
+                    "output_signal": "Z",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "TE_B": "VSS"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.00843962",
+                        "0.0542396",
+                        "0.0854396",
+                        "0.13704",
+                        "0.22344",
+                        "0.36744",
+                        "0.60744"
+                    ]
+                },
+                {
+                    "name": "disable_rise_TE_B",
+                    "type": "propagation_delay",
+                    "data_signal": "TE_B",
+                    "data_transition": "rise",
+                    "output_signal": "Z",
+                    "expected_output_transition": "rise",
+                    "timing_type": "three_state_disable_rise",
+                    "timing_sense": "positive_unate",
+                    "static_pins": {
+                        "A": "VDD"
+                    },
+                    "output_pull_to": "VDD",
+                    "output_pull_ohm": "6800",
+                    "disable_driven_high": false,
+                    "disable_delta_pct": 0.1,
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.00599856",
+                        "0.0517986",
+                        "0.0829986",
+                        "0.134599",
+                        "0.220999",
+                        "0.364999",
+                        "0.604999"
+                    ]
+                },
+                {
+                    "name": "enable_rise_TE_B",
+                    "type": "propagation_delay",
+                    "data_signal": "TE_B",
+                    "data_transition": "fall",
+                    "output_signal": "Z",
+                    "expected_output_transition": "rise",
+                    "timing_type": "three_state_enable_rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A": "VSS"
+                    },
+                    "output_pull_to": "VSS",
+                    "output_pull_ohm": "6800",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.00599856",
+                        "0.0517986",
+                        "0.0829986",
+                        "0.134599",
+                        "0.220999",
+                        "0.364999",
+                        "0.604999"
+                    ]
+                }
+            ],
+            "output_pin_attributes": {
+                "Z": {
+                    "function": "!(A)",
+                    "three_state": "TE_B"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+* NGSPICE file created from sg13g2_nor4_2_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_nor4_2_flat Y D VDD B A VSS C
+X0 a_140_412# A VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3864p ps=2.93u w=1.12u l=0.13u
+X1 VDD A a_140_412# VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X2 a_140_412# B a_352_412# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X3 a_352_412# B a_140_412# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X4 a_650_412# C a_352_412# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X5 a_352_412# C a_650_412# VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X6 Y A VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.2553p ps=2.17u w=0.74u l=0.13u
+X7 VSS A Y VSS sg13_lv_nmos ad=0.3293p pd=1.63u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X8 Y D a_650_412# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X9 Y B VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.3293p ps=1.63u w=0.74u l=0.13u
+X10 VSS B Y VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X11 a_650_412# D Y VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X12 Y C VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X13 VSS C Y VSS sg13_lv_nmos ad=0.3293p pd=1.63u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X14 Y D VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.3293p ps=1.63u w=0.74u l=0.13u
+X15 VSS D Y VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1406p ps=1.12u w=0.74u l=0.13u
+C0 Y D 0.24925f
+C1 Y a_352_412# 0.01104f
+C2 Y A 0.12094f
+C3 Y C 0.18001f
+C4 Y a_140_412# 0.0296f
+C5 D VDD 0.12671f
+C6 a_352_412# VDD 0.33874f
+C7 A VDD 0.1529f
+C8 Y a_650_412# 0.27814f
+C9 Y B 0.17934f
+C10 C VDD 0.10961f
+C11 a_140_412# VDD 0.36756f
+C12 D C 0.09012f
+C13 a_352_412# C 0.04007f
+C14 VDD a_650_412# 0.1574f
+C15 a_352_412# a_140_412# 0.2825f
+C16 B VDD 0.1127f
+C17 A a_140_412# 0.11282f
+C18 D a_650_412# 0.13083f
+C19 a_352_412# a_650_412# 0.37837f
+C20 a_352_412# B 0.03986f
+C21 B A 0.02816f
+C22 C a_650_412# 0.10645f
+C23 C B 0.0991f
+C24 B a_140_412# 0.1061f
+C25 Y VDD 0.01531f
+C26 Y VSS 1.03057f
+C27 D VSS 0.50904f
+C28 C VSS 0.46278f
+C29 B VSS 0.465f
+C30 A VSS 0.51438f
+C31 VDD VSS 0.2908f
+C32 a_650_412# VSS 0.05568f $ **FLOATING
+.ends

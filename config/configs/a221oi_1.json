@@ -1,0 +1,1629 @@
+{
+    "global_settings": {
+        "delay_degradation_percent": 10.0,
+        "temp_values": [
+            25
+        ],
+        "vdd_values": [
+            "1.5"
+        ],
+        "clock_slew_ns": [
+            0.0186,
+            0.51636,
+            1.263,
+            2.5074
+        ],
+        "data_slew_ns": [
+            0.0186,
+            0.0966,
+            0.174,
+            0.3294,
+            0.6408,
+            1.263,
+            2.5074
+        ],
+        "output_loads": [
+            "0.001",
+            "0.0234",
+            "0.039",
+            "0.0648",
+            "0.108",
+            "0.18",
+            "0.3"
+        ],
+        "sequential_loads": [
+            "0.05"
+        ],
+        "num_processes": 8,
+        "slew_scale_factor": 1.6667,
+        "sim_timestep_ps": 10,
+        "delay_window_ns": 30,
+        "sim_window_ns": 300,
+        "sim_method": "GEAR",
+        "sim_reltol": 0.005,
+        "sim_abstol": "1n",
+        "sim_vntol": "10u",
+        "sim_itl4": 100,
+        "sim_gmin": "1e-12",
+        "series_damping_ohm": 5,
+        "slew_lower_threshold_pct": 20,
+        "slew_upper_threshold_pct": 80,
+        "delay_threshold_pct": 50,
+        "pulse_start_ns": 5,
+        "pulse_start_preload_ns": 10,
+        "preload_switch_ns": 8.0,
+        "search_after_comb_ns": 4.5,
+        "search_after_settling_ns": 9.5,
+        "search_after_seq_ns": 14.0,
+        "search_after_ref_seq_ns": 14.5,
+        "binary_search_iterations": 8,
+        "sequential_sweep_points": 100,
+        "sequential_sweep_margin_ns": 1.05,
+        "mpw_min_width_ns": 0.02,
+        "mpw_max_width_ns": 5.0,
+        "mpw_sweep_points_fast": 50,
+        "mpw_sweep_points_normal": 100,
+        "mpw_input_threshold": 0.9,
+        "mpw_output_threshold": 0.8,
+        "seq_search_fail_bound_ff": -6.0,
+        "seq_search_pass_bound_ff": 6.0,
+        "seq_search_fail_bound_latch": -1.5,
+        "seq_search_pass_bound_latch": 1.0,
+        "seq_search_fail_bound_hold": -1.0,
+        "seq_search_pass_bound_hold": 4.0,
+        "seq_search_fail_bound_latch_hold": 1.0,
+        "seq_search_pass_bound_latch_hold": -4.0,
+        "seq_search_fail_bound_removal": 1.0,
+        "seq_search_pass_bound_removal": -4.0,
+        "lib_name": "sg13g2_custom_typ_1p50V_25C",
+        "lef_file": "/mnt/c/Users/adars/IHP/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef",
+        "nom_process": 1,
+        "model_lib": "cornerMOSlv.lib",
+        "model_corner": "mos_tt"
+    },
+    "cells": [
+        {
+            "name": "sg13g2_a221oi_1_flat_pex",
+            "spice_model": "sg13g2_a221oi_1_flat",
+            "pin_mapping": "VSS VDD C1 Y B2 B1 A2 A1",
+            "has_qn_output": false,
+            "function_mapping": {
+                "data": "C1",
+                "output": "Y",
+                "vdd": "VDD",
+                "vss": "VSS"
+            },
+            "arcs": [
+                {
+                    "name": "cell_fall_C1_nA1_nA2_nB1_nB2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!A1&!A2&!B1&!B2",
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "0",
+                        "B1": "0",
+                        "B2": "0"
+                    },
+                    "_group": "DELAY ARCS (C1 -> Y) when (!A1 * !A2 * !B1 * !B2)",
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_rise_C1_nA1_nA2_nB1_nB2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!A1&!A2&!B1&!B2",
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "0",
+                        "B1": "0",
+                        "B2": "0"
+                    },
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_fall_C1",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "0",
+                        "B1": "0",
+                        "B2": "0"
+                    },
+                    "_group": "DELAY ARCS (C1 -> Y)",
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_rise_C1",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "0",
+                        "B1": "0",
+                        "B2": "0"
+                    },
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_fall_B2_nA1_nA2_nC1",
+                    "type": "propagation_delay",
+                    "data_signal": "B2",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!A1&!A2&!C1&B1",
+                    "static_pins": {
+                        "B1": "VDD",
+                        "A1": "0",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "_group": "DELAY ARCS (B2 -> Y) when (!A1 * !A2 * !C1)",
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_rise_B2_nA1_nA2_nC1",
+                    "type": "propagation_delay",
+                    "data_signal": "B2",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!A1&!A2&!C1&B1",
+                    "static_pins": {
+                        "B1": "VDD",
+                        "A1": "0",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_fall_B1_nA1_nA2_nC1",
+                    "type": "propagation_delay",
+                    "data_signal": "B1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!A1&!A2&!C1&B2",
+                    "static_pins": {
+                        "B2": "VDD",
+                        "A1": "0",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "_group": "DELAY ARCS (B1 -> Y) when (!A1 * !A2 * !C1)",
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_rise_B1_nA1_nA2_nC1",
+                    "type": "propagation_delay",
+                    "data_signal": "B1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!A1&!A2&!C1&B2",
+                    "static_pins": {
+                        "B2": "VDD",
+                        "A1": "0",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_fall_A2_nB1_nB2_nC1",
+                    "type": "propagation_delay",
+                    "data_signal": "A2",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!B1&!B2&!C1&A1",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "B1": "0",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "_group": "DELAY ARCS (A2 -> Y) when (!B1 * !B2 * !C1)",
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_rise_A2_nB1_nB2_nC1",
+                    "type": "propagation_delay",
+                    "data_signal": "A2",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!B1&!B2&!C1&A1",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "B1": "0",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_fall_A1_nB1_nB2_nC1",
+                    "type": "propagation_delay",
+                    "data_signal": "A1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!B1&!B2&!C1&A2",
+                    "static_pins": {
+                        "A2": "VDD",
+                        "B1": "0",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "_group": "DELAY ARCS (A1 -> Y) when (!B1 * !B2 * !C1)",
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "name": "cell_rise_A1_nB1_nB2_nC1",
+                    "type": "propagation_delay",
+                    "data_signal": "A1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "when": "!B1&!B2&!C1&A2",
+                    "static_pins": {
+                        "A2": "VDD",
+                        "B1": "0",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A1 -> Y) when !B1&B2",
+                    "name": "cell_rise_A1_nB1_B2",
+                    "type": "propagation_delay",
+                    "data_signal": "A1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A2": "VDD",
+                        "B1": "0",
+                        "B2": "VDD",
+                        "C1": "0"
+                    },
+                    "when": "!B1&!C1&A2&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A1 -> Y) when !B1&B2",
+                    "name": "cell_fall_A1_nB1_B2",
+                    "type": "propagation_delay",
+                    "data_signal": "A1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A2": "VDD",
+                        "B1": "0",
+                        "B2": "VDD",
+                        "C1": "0"
+                    },
+                    "when": "!B1&!C1&A2&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A1 -> Y) when B1&!B2",
+                    "name": "cell_rise_A1_B1_nB2",
+                    "type": "propagation_delay",
+                    "data_signal": "A1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A2": "VDD",
+                        "B1": "VDD",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "when": "!B2&!C1&A2&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A1 -> Y) when B1&!B2",
+                    "name": "cell_fall_A1_B1_nB2",
+                    "type": "propagation_delay",
+                    "data_signal": "A1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A2": "VDD",
+                        "B1": "VDD",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "when": "!B2&!C1&A2&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A2 -> Y) when !B1&B2",
+                    "name": "cell_rise_A2_nB1_B2",
+                    "type": "propagation_delay",
+                    "data_signal": "A2",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "B1": "0",
+                        "B2": "VDD",
+                        "C1": "0"
+                    },
+                    "when": "!B1&!C1&A1&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A2 -> Y) when !B1&B2",
+                    "name": "cell_fall_A2_nB1_B2",
+                    "type": "propagation_delay",
+                    "data_signal": "A2",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "B1": "0",
+                        "B2": "VDD",
+                        "C1": "0"
+                    },
+                    "when": "!B1&!C1&A1&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A2 -> Y) when B1&!B2",
+                    "name": "cell_rise_A2_B1_nB2",
+                    "type": "propagation_delay",
+                    "data_signal": "A2",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "B1": "VDD",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "when": "!B2&!C1&A1&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A2 -> Y) when B1&!B2",
+                    "name": "cell_fall_A2_B1_nB2",
+                    "type": "propagation_delay",
+                    "data_signal": "A2",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "B1": "VDD",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "when": "!B2&!C1&A1&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B1 -> Y) when !A1&A2",
+                    "name": "cell_rise_B1_nA1_A2",
+                    "type": "propagation_delay",
+                    "data_signal": "B1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B2": "VDD",
+                        "A1": "0",
+                        "A2": "VDD",
+                        "C1": "0"
+                    },
+                    "when": "!A1&!C1&A2&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B1 -> Y) when !A1&A2",
+                    "name": "cell_fall_B1_nA1_A2",
+                    "type": "propagation_delay",
+                    "data_signal": "B1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B2": "VDD",
+                        "A1": "0",
+                        "A2": "VDD",
+                        "C1": "0"
+                    },
+                    "when": "!A1&!C1&A2&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B1 -> Y) when A1&!A2",
+                    "name": "cell_rise_B1_A1_nA2",
+                    "type": "propagation_delay",
+                    "data_signal": "B1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B2": "VDD",
+                        "A1": "VDD",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "when": "!A2&!C1&A1&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B1 -> Y) when A1&!A2",
+                    "name": "cell_fall_B1_A1_nA2",
+                    "type": "propagation_delay",
+                    "data_signal": "B1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B2": "VDD",
+                        "A1": "VDD",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "when": "!A2&!C1&A1&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B2 -> Y) when !A1&A2",
+                    "name": "cell_rise_B2_nA1_A2",
+                    "type": "propagation_delay",
+                    "data_signal": "B2",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B1": "VDD",
+                        "A1": "0",
+                        "A2": "VDD",
+                        "C1": "0"
+                    },
+                    "when": "!A1&!C1&A2&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B2 -> Y) when !A1&A2",
+                    "name": "cell_fall_B2_nA1_A2",
+                    "type": "propagation_delay",
+                    "data_signal": "B2",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B1": "VDD",
+                        "A1": "0",
+                        "A2": "VDD",
+                        "C1": "0"
+                    },
+                    "when": "!A1&!C1&A2&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B2 -> Y) when A1&!A2",
+                    "name": "cell_rise_B2_A1_nA2",
+                    "type": "propagation_delay",
+                    "data_signal": "B2",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B1": "VDD",
+                        "A1": "VDD",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "when": "!A2&!C1&A1&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B2 -> Y) when A1&!A2",
+                    "name": "cell_fall_B2_A1_nA2",
+                    "type": "propagation_delay",
+                    "data_signal": "B2",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B1": "VDD",
+                        "A1": "VDD",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "when": "!A2&!C1&A1&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (C1 -> Y) when !B1&B2",
+                    "name": "cell_rise_C1_nB1_B2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "0",
+                        "B1": "0",
+                        "B2": "VDD"
+                    },
+                    "when": "!A1&!A2&!B1&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (C1 -> Y) when !B1&B2",
+                    "name": "cell_fall_C1_nB1_B2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "0",
+                        "B1": "0",
+                        "B2": "VDD"
+                    },
+                    "when": "!A1&!A2&!B1&B2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (C1 -> Y) when B1&!B2",
+                    "name": "cell_rise_C1_B1_nB2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "0",
+                        "B1": "VDD",
+                        "B2": "0"
+                    },
+                    "when": "!A1&!A2&!B2&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (C1 -> Y) when B1&!B2",
+                    "name": "cell_fall_C1_B1_nB2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "0",
+                        "B1": "VDD",
+                        "B2": "0"
+                    },
+                    "when": "!A1&!A2&!B2&B1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (C1 -> Y) when !A1&A2",
+                    "name": "cell_rise_C1_nA1_A2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "VDD",
+                        "B1": "0",
+                        "B2": "0"
+                    },
+                    "when": "!A1&!B1&!B2&A2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (C1 -> Y) when !A1&A2",
+                    "name": "cell_fall_C1_nA1_A2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "0",
+                        "A2": "VDD",
+                        "B1": "0",
+                        "B2": "0"
+                    },
+                    "when": "!A1&!B1&!B2&A2",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (C1 -> Y) when A1&!A2",
+                    "name": "cell_rise_C1_A1_nA2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "A2": "0",
+                        "B1": "0",
+                        "B2": "0"
+                    },
+                    "when": "!A2&!B1&!B2&A1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (C1 -> Y) when A1&!A2",
+                    "name": "cell_fall_C1_A1_nA2",
+                    "type": "propagation_delay",
+                    "data_signal": "C1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "A2": "0",
+                        "B1": "0",
+                        "B2": "0"
+                    },
+                    "when": "!A2&!B1&!B2&A1",
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A1 -> Y) default",
+                    "name": "cell_fall_A1",
+                    "type": "propagation_delay",
+                    "data_signal": "A1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A2": "VDD",
+                        "B1": "0",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A1 -> Y) default",
+                    "name": "cell_rise_A1",
+                    "type": "propagation_delay",
+                    "data_signal": "A1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A2": "VDD",
+                        "B1": "0",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A2 -> Y) default",
+                    "name": "cell_fall_A2",
+                    "type": "propagation_delay",
+                    "data_signal": "A2",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "B1": "0",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (A2 -> Y) default",
+                    "name": "cell_rise_A2",
+                    "type": "propagation_delay",
+                    "data_signal": "A2",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "A1": "VDD",
+                        "B1": "0",
+                        "B2": "0",
+                        "C1": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B1 -> Y) default",
+                    "name": "cell_fall_B1",
+                    "type": "propagation_delay",
+                    "data_signal": "B1",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B2": "VDD",
+                        "A1": "0",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B1 -> Y) default",
+                    "name": "cell_rise_B1",
+                    "type": "propagation_delay",
+                    "data_signal": "B1",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B2": "VDD",
+                        "A1": "0",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B2 -> Y) default",
+                    "name": "cell_fall_B2",
+                    "type": "propagation_delay",
+                    "data_signal": "B2",
+                    "data_transition": "rise",
+                    "output_signal": "Y",
+                    "expected_output_transition": "fall",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B1": "VDD",
+                        "A1": "0",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                },
+                {
+                    "_group": "DELAY ARCS (B2 -> Y) default",
+                    "name": "cell_rise_B2",
+                    "type": "propagation_delay",
+                    "data_signal": "B2",
+                    "data_transition": "fall",
+                    "output_signal": "Y",
+                    "expected_output_transition": "rise",
+                    "timing_sense": "negative_unate",
+                    "static_pins": {
+                        "B1": "VDD",
+                        "A1": "0",
+                        "A2": "0",
+                        "C1": "0"
+                    },
+                    "data_slew_ns": [
+                        0.0186,
+                        0.0966,
+                        0.174,
+                        0.3294,
+                        0.6408,
+                        1.263,
+                        2.5074
+                    ],
+                    "output_loads": [
+                        "0.001",
+                        "0.0234",
+                        "0.039",
+                        "0.0648",
+                        "0.108",
+                        "0.18",
+                        "0.3"
+                    ]
+                }
+            ],
+            "output_pin_attributes": {
+                "Y": {
+                    "function": "!((A1*A2)+(B1*B2)+C1)"
+                }
+            }
+        }
+    ]
+}

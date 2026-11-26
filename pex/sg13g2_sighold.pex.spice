@@ -1,0 +1,14 @@
+* NGSPICE file created from sg13g2_sighold_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_sighold_flat SH VDD VSS
+X0 SH a_31_187# VSS VSS sg13_lv_nmos ad=0.102p pd=1.28u as=0.54435p ps=3.11u w=0.3u l=0.7u
+X1 VSS SH a_31_187# VSS sg13_lv_nmos ad=0.54435p pd=3.11u as=0.102p ps=1.28u w=0.3u l=0.13u
+X2 SH a_31_187# VDD VDD sg13_lv_pmos ad=0.102p pd=1.28u as=0.89137p ps=3.515u w=0.3u l=0.7u
+X3 VDD SH a_31_187# VDD sg13_lv_pmos ad=0.89137p pd=3.515u as=0.153p ps=1.58u w=0.45u l=0.13u
+C0 SH a_31_187# 0.39139f
+C1 a_31_187# VDD 0.14208f
+C2 SH VDD 0.13308f
+C3 SH VSS 0.24541f
+C4 VDD VSS 0.12194f
+C5 a_31_187# VSS 0.3494f $ **FLOATING
+.ends

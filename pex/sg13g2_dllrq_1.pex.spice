@@ -1,0 +1,153 @@
+* Converted from Spectre av_extracted (sg13g2_stdcell_rc_HU_v2.scs)
+* Cell: sg13g2_dfrbp_1   Ports: Q Q_N CLK D RESET_B VDD VSS
+.subckt sg13g2_dllrq_1_flat Q D GATE_N RESET_B VDD VSS
+XX4 Db_2 D_3 VSS_1 VSS_1 sg13_lv_nmos w=5.5e-07 l=1.3e-07  ng=1 ad=1.87e-13 as=2.2815e-13 pd=1.78e-06 ps=1.66e-06 m=1
+CC1 D VSS 4.83984e-18
+CC2 GATE_N VSS 7.31148e-18
+CC3 Q VSS 7.2442e-18
+CC4 RESET_B VSS 9.58456e-18
+CC5 VDD VSS 1.26201e-16
+CC6 Db VSS 1.91269e-16
+CC7 gnb VSS 2.06247e-17
+CC8 gnbb VSS 6.9693e-17
+CC9 qint VSS 4.21713e-18
+CC10 qint_b VSS 8.20597e-17
+CC11 qint_b_9 VSS 1.63115e-17
+CC12 RESET_B_1 VSS 5.44916e-17
+CC13 qint_4 VSS 6.98222e-17
+CC14 gnbb_3 VSS 5.28057e-17
+CC15 gnb_7 VSS 1.09449e-16
+CC16 Db_5 VSS 7.62254e-17
+CC17 gnb_4 VSS 1.93277e-17
+CC18 GATE_N_3 VSS 2.39289e-17
+CC19 D_3 VSS 1.87584e-17
+CC20 qint_b_10 VSS 2.21432e-17
+CC21 RESET_B_3 VSS 5.41721e-17
+CC22 qint_6 VSS 4.95521e-17
+CC23 qint_b_3 VSS 1.65361e-17
+CC24 gnb_8 VSS 1.64174e-17
+CC25 Db_6 VSS 7.3216e-17
+CC26 GATE_N_1 VSS 2.58308e-17
+CC27 D_1 VSS 2.17293e-17
+CC28 qint_b_8 VSS 1.29798e-16
+CC29 RESET_B_2 VSS 1.31616e-16
+CC30 qint_2 VSS 2.25095e-16
+CC31 qint_b_2 VSS 2.42622e-16
+CC32 gnbb_4 VSS 1.85201e-16
+CC33 gnb_5 VSS 5.72041e-18
+CC34 gnbb_2 VSS 1.55208e-16
+CC35 gnb_3 VSS 1.06334e-16
+CC36 GATE_N_2 VSS 1.04414e-16
+CC37 D_2 VSS 8.61892e-17
+CC38 VDD_1 VSS 3.78079e-19
+CC39 VDD_7 VSS 6.5605e-19
+CC40 qint_b_7 VSS 8.1244e-20
+CC41 VDD_8 VSS 6.28711e-18
+CC42 qint_3 VSS 3.44035e-17
+CC43 Q_3 VSS 5.39827e-17
+CC44 qint_b_4 VSS 1.23506e-17
+CC45 gnbb_6 VSS 1.80685e-17
+CC46 gnb_10 VSS 1.21173e-17
+CC47 gnbb_7 VSS 3.71044e-18
+CC48 gnb_11 VSS 5.15587e-18
+CC49 VDD_6 VSS 6.45855e-17
+CC50 Db_2 VSS 6.13435e-17
+CC51 Db_4 VSS 6.89967e-18
+CC52 gnb_2 VSS 9.44678e-17
+CC53 gnb_6 VSS 2.24899e-16
+CC54 gnbb_5 VSS 1.75667e-17
+CC55 qint_b_5 VSS 1.04528e-17
+CC56 VDD_2 VSS 2.14519e-18
+CC57 VDD_3 VSS 1.7594e-18
+CC58 VDD_5 VSS 1.67425e-17
+RRg1 D_4 D 0.01055
+RRg2 D_2 D_4 15
+RRg3 GATE_N_4 GATE_N 0.01222
+RRg4 GATE_N_2 GATE_N_4 15
+RRg5 Db Db_3 16.861
+RRg6 Db_3 Db_4 8.25
+RRg7 Db_2 Db_3 15
+RRg8 gnb_5 gnb_9 1.8317
+RRg9 gnb_9 gnb_3 0.3787
+RRg10 gnb_3 gnb_10 15.3004
+RRg11 gnb_9 gnb_11 7.5428
+RRg12 gnbb_4 gnbb_2 0.3705
+RRg13 gnbb_2 gnbb_5 0.7313
+RRg14 gnbb_5 gnbb_6 15.6215
+RRg15 gnbb_5 gnbb_7 15.1611
+RRg16 qint qint_2 16.027
+RRg17 qint_2 qint_3 16.3988
+RRg18 RESET_B_2 RESET_B 15.0054
+RRg19 qint_b_4 qint_b_5 8.2642
+RRg20 qint_b_5 qint_b_2 15.3035
+RRg21 qint_b_5 qint_b_6 0.1154
+RRg22 qint_b_6 qint_b_7 7.6123
+RRg23 qint_b_6 qint_b_8 15.8877
+RRg24 Q Q_2 0.005
+RRg25 Q_2 Q_3 8.4588
+RRg26 Q_1 Q_2 5
+RRg27 VSS_1 VSS_2 5.0869
+RRg28 VSS_2 VSS_3 0.3625
+RRg29 VSS_3 VSS 0.3644
+RRg30 VSS VSS_4 0.1388
+RRg31 VSS_4 VSS_1 15.6322
+RRg32 VSS_2 VSS_5 7.7829
+RRg33 VSS_3 VSS_6 15.2026
+RRg34 VSS_4 VSS_1 7.5575
+RRg35 VSS_1 VSS_4 1.1538
+RRg36 VDD_1 VDD_2 5.0938
+RRg37 VDD_2 VDD_3 0.3062
+RRg38 VDD_3 VDD 0.3437
+RRg39 VDD VDD_4 0.1975
+RRg40 VDD_4 VDD_5 0.06686
+RRg41 VDD_5 VDD_6 8.4262
+RRg42 VDD_2 VDD_7 7.8318
+RRg43 VDD_3 VDD_8 7.6182
+RRg44 VDD_5 VDD_1 15.2153
+RRg45 VDD_1 VDD_4 1.1538
+RRh1 D_1 D_2 13.4136
+RRh2 D_2 D_3 11.7982
+RRh3 GATE_N_1 GATE_N_2 13.4136
+RRh4 GATE_N_2 GATE_N_3 11.7982
+RRh5 gnb gnb_2 24.0545
+RRh6 gnb_2 gnb_3 24.5706
+RRh7 gnb_2 gnb_4 18.6699
+RRh8 Db_5 Db 32.4105
+RRh9 Db Db_6 23.1059
+RRh10 gnbb gnbb_2 28.1444
+RRh11 gnb_5 gnb_6 16.3342
+RRh12 gnb_6 gnb_7 62.0995
+RRh13 gnb_6 gnb_8 17.1511
+RRh14 gnbb_3 gnbb_4 39.7213
+RRh15 qint_b qint_b_2 67.9835
+RRh16 qint_b_2 qint_b_3 12.8752
+RRh17 qint_4 qint_5 26.8595
+RRh18 qint_5 qint_6 27.2249
+RRh19 qint_2 qint_5 15
+RRh20 RESET_B_1 RESET_B_2 9.1059
+RRh21 RESET_B_2 RESET_B_3 24.7213
+RRh22 qint_b_9 qint_b_8 14.4381
+RRh23 qint_b_8 qint_b_10 16.8787
+XX13 Db_4 D_1 VDD_6 VDD sg13_lv_pmos w=8.4e-07 l=1.3e-07 ng=1  ad=2.856e-13 as=1.596e-13 pd=2.36e-06 ps=1.22e-06 m=1
+XX5 gnb_11 GATE_N_1 VDD_6 VDD sg13_lv_pmos w=8.4e-07  l=1.3e-07 ng=1 ad=2.856e-13 as=1.596e-13 pd=2.36e-06 ps=1.22e-06  m=1
+XX20 gnbb_7 gnb VDD_1 VDD sg13_lv_pmos w=8.4e-07 l=1.3e-07 ng=1  ad=3.822e-13 as=2.939e-13 pd=2.59e-06 ps=1.97e-06 m=1
+XX18 net59 Db_6 VDD_1 VDD sg13_lv_pmos w=1e-06 l=1.3e-07 ng=1  ad=9e-14 as=2.939e-13 pd=1.18e-06 ps=1.97e-06 m=1
+XX10 qint_3 gnbb net59 VDD sg13_lv_pmos w=1e-06 l=1.3e-07 ng=1  ad=2.308e-13 as=9e-14 pd=1.595e-06 ps=1.18e-06 m=1
+XX1 qint_b_7 qint_6 VDD_8 VDD sg13_lv_pmos w=1e-06 l=1.3e-07  ng=1 ad=1.9e-13 as=2.43675e-13 pd=1.38e-06 ps=1.81e-06 m=1
+XX0 qint_b_7 RESET_B_3 VDD_7 VDD sg13_lv_pmos w=1e-06  l=1.3e-07 ng=1 ad=1.9e-13 as=2.254e-13 pd=1.38e-06 ps=1.53e-06 m=1
+XX15 qint_3 gnb_8 net92 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07  ng=1 ad=2.308e-13 as=1.1655e-13 pd=1.595e-06 ps=9.75e-07 m=1
+XX6 net92 qint_b_3 VDD_8 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07  ng=1 ad=1.1655e-13 as=2.43675e-13 pd=9.75e-07 ps=1.81e-06 m=1
+XX9 Q_1 qint_b_10 VDD_7 VDD sg13_lv_pmos w=1.12e-06 l=1.3e-07  ng=1 ad=5.6e-13 as=2.254e-13 pd=3.24e-06 ps=1.53e-06 m=1
+XX19 gnb_10 GATE_N_3 VSS_1 VSS_1 sg13_lv_nmos w=7.4e-07  l=1.3e-07 ng=1 ad=2.516e-13 as=2.2815e-13 pd=2.16e-06 ps=1.66e-06  m=1
+XX17 gnbb_6 gnb_4 VSS_1 VSS_1 sg13_lv_nmos w=7.4e-07  l=1.3e-07 ng=1 ad=2.516e-13 as=4.4235e-13 pd=2.16e-06 ps=2.035e-06  m=1
+XX12 qint_b_4 qint_4 net116 VSS_1 sg13_lv_nmos w=7.4e-07  l=1.3e-07 ng=1 ad=2.516e-13 as=8.88e-14 pd=2.16e-06 ps=9.8e-07 m=1
+XX21 net116 RESET_B_1 VSS_5 VSS_1 sg13_lv_nmos w=7.4e-07  l=1.3e-07 ng=1 ad=8.88e-14 as=1.702e-13 pd=9.8e-07 ps=1.2e-06 m=1
+XX7 Q_3 qint_b_9 VSS_5 VSS_1 sg13_lv_nmos w=7.4e-07  l=1.3e-07 ng=1 ad=2.849e-13 as=1.702e-13 pd=2.25e-06 ps=1.2e-06  m=1
+XX23 net61 Db_5 VSS_1 VSS_1 sg13_lv_nmos w=6.4e-07 l=1.3e-07  ng=1 ad=8.32e-14 as=4.4235e-13 pd=9e-07 ps=2.035e-06 m=1
+XX16 qint gnb_7 net61 VSS_1 sg13_lv_nmos w=6.4e-07 l=1.3e-07  ng=1 ad=1.095e-13 as=8.32e-14 pd=1.02e-06 ps=9e-07 m=1
+XX11 qint gnbb_3 net89 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07  ng=1 ad=1.095e-13 as=4.935e-14 pd=1.02e-06 ps=6.55e-07 m=1
+XX14 net89 qint_b VSS_6 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07  ng=1 ad=4.935e-14 as=1.428e-13 pd=6.55e-07 ps=1.52e-06 m=1
+.ends sg13g2_dllrq_1_flat
+
+* Converted from Spectre av_extracted (sg13g2_stdcell_rc_HU_v2.scs)
+* Cell: sg13g2_sdfrbpq_1   Ports: Q CLK D RESET_B SCD SCE VDD VSS

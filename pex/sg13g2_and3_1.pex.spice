@@ -1,0 +1,30 @@
+* NGSPICE file created from sg13g2_and3_1_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_and3_1_flat X B VDD VSS C A
+X0 a_170_160# A a_76_160# VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.2176p ps=1.96u w=0.64u l=0.13u
+X1 a_272_160# B a_170_160# VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X2 VSS C a_272_160# VSS sg13_lv_nmos ad=0.1371p pd=1.12u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X3 VDD A a_76_160# VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X4 a_76_160# B VDD VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X5 VDD C a_76_160# VDD sg13_lv_pmos ad=0.36195p pd=1.84u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X6 X a_76_160# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.36195p ps=1.84u w=1.12u l=0.13u
+X7 X a_76_160# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1371p ps=1.12u w=0.74u l=0.13u
+C0 A a_76_160# 0.08013f
+C1 VDD C 0.07807f
+C2 a_170_160# A 0.01021f
+C3 VDD A 0.07433f
+C4 VDD a_76_160# 0.49377f
+C5 C B 0.16137f
+C6 X a_76_160# 0.15762f
+C7 A B 0.11282f
+C8 B a_76_160# 0.1631f
+C9 C a_76_160# 0.19584f
+C10 VDD X 0.16181f
+C11 VDD B 0.07253f
+C12 X VSS 0.18874f
+C13 C VSS 0.22427f
+C14 B VSS 0.1894f
+C15 A VSS 0.55086f
+C16 VDD VSS 0.15358f
+C17 a_76_160# VSS 0.35183f $ **FLOATING
+.ends

@@ -1,0 +1,8 @@
+* NGSPICE file created from sg13g2_fill_2_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_fill_2_flat VSS VDD
+C0 VDD a_40_246# 0.11365f
+C1 VDD VSS 0.07742f
+C2 a_40_36# VSS 0.01336f $ **FLOATING
+C3 a_40_246# VSS 0.16147f
+.ends

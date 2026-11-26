@@ -1,0 +1,27 @@
+* NGSPICE file created from sg13g2_dlygate4sd1_1_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_dlygate4sd1_1_flat X VDD VSS A
+X0 a_294_118# a_38_118# VDD VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.3081p ps=1.68u w=1u l=0.13u
+X1 VSS a_294_118# a_426_182# VSS sg13_lv_nmos ad=0.1405p pd=1.15u as=0.2373p ps=1.97u w=0.42u l=0.13u
+X2 VDD A a_38_118# VDD sg13_lv_pmos ad=0.3081p pd=1.68u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X3 a_294_118# a_38_118# VSS VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=0.1428p ps=1.1u w=0.42u l=0.13u
+X4 X a_426_182# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1405p ps=1.15u w=0.74u l=0.13u
+X5 VSS A a_38_118# VSS sg13_lv_nmos ad=0.1428p pd=1.1u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X6 VDD a_294_118# a_426_182# VDD sg13_lv_pmos ad=0.2086p pd=1.5u as=0.58p ps=3.16u w=1u l=0.13u
+X7 X a_426_182# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2086p ps=1.5u w=1.12u l=0.13u
+C0 X VDD 0.139f
+C1 VDD a_38_118# 0.23672f
+C2 A VDD 0.09259f
+C3 a_426_182# a_294_118# 0.4415f
+C4 a_294_118# VDD 0.16975f
+C5 A a_38_118# 0.36107f
+C6 a_426_182# VDD 0.16647f
+C7 a_294_118# a_38_118# 0.2928f
+C8 X a_426_182# 0.23851f
+C9 X VSS 0.17191f
+C10 A VSS 0.22292f
+C11 VDD VSS 0.16161f
+C12 a_426_182# VSS 0.37661f $ **FLOATING
+C13 a_294_118# VSS 0.30564f $ **FLOATING
+C14 a_38_118# VSS 0.46587f $ **FLOATING
+.ends

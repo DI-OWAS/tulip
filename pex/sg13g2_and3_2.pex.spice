@@ -1,0 +1,33 @@
+* NGSPICE file created from sg13g2_and3_2_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_and3_2_flat X B VDD VSS C A
+X0 a_170_160# A a_76_160# VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.2176p ps=1.96u w=0.64u l=0.13u
+X1 a_272_160# B a_170_160# VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X2 VSS C a_272_160# VSS sg13_lv_nmos ad=0.1371p pd=1.12u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X3 VDD A a_76_160# VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X4 a_76_160# B VDD VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X5 VDD C a_76_160# VDD sg13_lv_pmos ad=0.1956p pd=1.5u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X6 X a_76_160# VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.1956p ps=1.5u w=1.12u l=0.13u
+X7 VDD a_76_160# X VDD sg13_lv_pmos ad=0.392p pd=2.94u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X8 X a_76_160# VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1371p ps=1.12u w=0.74u l=0.13u
+X9 VSS a_76_160# X VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1406p ps=1.12u w=0.74u l=0.13u
+C0 B A 0.11282f
+C1 B a_76_160# 0.1631f
+C2 X VDD 0.29772f
+C3 A VDD 0.07433f
+C4 a_76_160# VDD 0.50069f
+C5 X C 0.02198f
+C6 a_76_160# C 0.16947f
+C7 B VDD 0.07253f
+C8 A a_170_160# 0.01021f
+C9 B C 0.16137f
+C10 VDD C 0.07121f
+C11 X a_76_160# 0.22503f
+C12 A a_76_160# 0.08018f
+C13 X VSS 0.22531f
+C14 C VSS 0.22438f
+C15 B VSS 0.1894f
+C16 A VSS 0.55089f
+C17 VDD VSS 0.16552f
+C18 a_76_160# VSS 0.56373f $ **FLOATING
+.ends

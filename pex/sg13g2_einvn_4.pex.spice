@@ -1,0 +1,45 @@
+* NGSPICE file created from sg13g2_einvn_4_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_einvn_4_flat A VSS VDD TE_B Z
+X0 a_163_412# TE_B VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.392p ps=2.94u w=1.12u l=0.13u
+X1 VDD TE_B a_302_412# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X2 a_302_412# TE_B VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X3 VDD TE_B a_302_412# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X4 VSS a_163_412# a_342_118# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X5 a_302_412# TE_B VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X6 a_163_412# TE_B VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X7 Z A a_302_412# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X8 a_342_118# a_163_412# VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X9 a_302_412# A Z VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X10 VSS a_163_412# a_342_118# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X11 Z A a_302_412# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X12 a_342_118# a_163_412# VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X13 Z A a_342_118# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X14 a_342_118# A Z VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X15 a_302_412# A Z VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X16 Z A a_342_118# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X17 a_342_118# A Z VSS sg13_lv_nmos ad=0.22135p pd=2.16u as=0.1406p ps=1.12u w=0.74u l=0.13u
+C0 a_302_412# A 0.09762f
+C1 a_302_412# a_342_118# 0.35319f
+C2 A a_342_118# 0.05478f
+C3 a_302_412# TE_B 0.09587f
+C4 TE_B A 0.01539f
+C5 a_163_412# VDD 0.19468f
+C6 a_302_412# a_163_412# 0.12145f
+C7 a_302_412# VDD 1.07687f
+C8 a_163_412# A 0.01328f
+C9 VDD A 0.22163f
+C10 a_302_412# Z 0.58867f
+C11 A Z 0.48242f
+C12 a_163_412# a_342_118# 0.26428f
+C13 Z a_342_118# 0.3954f
+C14 a_163_412# TE_B 0.29163f
+C15 TE_B VDD 0.44316f
+C16 Z VSS 0.02385f
+C17 A VSS 0.96175f
+C18 TE_B VSS 0.80615f
+C19 VDD VSS 0.2615f
+C20 a_342_118# VSS 0.8103f $ **FLOATING
+C21 a_302_412# VSS 0.04991f $ **FLOATING
+C22 a_163_412# VSS 0.87174f $ **FLOATING
+.ends

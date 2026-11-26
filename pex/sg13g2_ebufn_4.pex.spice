@@ -1,0 +1,51 @@
+* NGSPICE file created from sg13g2_ebufn_4_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_ebufn_4_flat A VDD VSS Z TE_B
+X0 a_428_114# a_52_114# Z VSS sg13_lv_nmos ad=0.1443p pd=1.13u as=0.1443p ps=1.13u w=0.74u l=0.13u
+X1 VSS a_251_114# a_428_114# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X2 a_420_414# a_52_114# Z VDD sg13_lv_pmos ad=0.2184p pd=1.51u as=0.2184p ps=1.51u w=1.12u l=0.13u
+X3 a_428_114# a_251_114# VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X4 VDD TE_B a_420_414# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.4256p ps=3u w=1.12u l=0.13u
+X5 a_420_414# TE_B VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X6 VDD A a_52_114# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X7 a_251_114# TE_B VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.14615p ps=1.135u w=0.74u l=0.13u
+X8 a_251_114# TE_B VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X9 VSS a_251_114# a_428_114# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X10 Z a_52_114# a_428_114# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1443p ps=1.13u w=0.74u l=0.13u
+X11 a_428_114# a_251_114# VSS VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X12 a_428_114# a_52_114# Z VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X13 Z a_52_114# a_420_414# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2184p ps=1.51u w=1.12u l=0.13u
+X14 VDD TE_B a_420_414# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X15 Z a_52_114# a_428_114# VSS sg13_lv_nmos ad=0.1443p pd=1.13u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X16 a_420_414# a_52_114# Z VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X17 a_420_414# TE_B VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X18 Z a_52_114# a_420_414# VDD sg13_lv_pmos ad=0.2184p pd=1.51u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X19 VSS A a_52_114# VSS sg13_lv_nmos ad=0.14615p pd=1.135u as=0.2516p ps=2.16u w=0.74u l=0.13u
+C0 A a_52_114# 0.12623f
+C1 a_428_114# a_52_114# 0.34497f
+C2 Z a_52_114# 0.46813f
+C3 a_251_114# A 0.01405f
+C4 a_251_114# a_428_114# 0.28283f
+C5 VDD a_52_114# 0.47039f
+C6 a_251_114# VDD 0.02271f
+C7 TE_B a_420_414# 0.06091f
+C8 a_251_114# a_52_114# 0.21722f
+C9 TE_B A 0.10381f
+C10 TE_B VDD 0.35627f
+C11 a_428_114# a_420_414# 0.01365f
+C12 Z a_420_414# 0.4016f
+C13 TE_B a_52_114# 0.10295f
+C14 VDD a_420_414# 0.88404f
+C15 TE_B a_251_114# 0.32129f
+C16 Z a_428_114# 0.25561f
+C17 A VDD 0.0655f
+C18 a_420_414# a_52_114# 0.44686f
+C19 Z VSS 0.03695f
+C20 TE_B VSS 0.75341f
+C21 A VSS 0.28675f
+C22 VDD VSS 0.2593f
+C23 a_428_114# VSS 0.8537f $ **FLOATING
+C24 a_420_414# VSS 0.03948f $ **FLOATING
+C25 a_251_114# VSS 0.82932f $ **FLOATING
+C26 a_52_114# VSS 1.16317f $ **FLOATING
+.ends

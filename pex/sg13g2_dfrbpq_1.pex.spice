@@ -1,0 +1,758 @@
+* ============================================================================
+* sg13g2_dfrbpq_1 - D Flip-Flop with Reset (PEX extracted)
+* Converted from Spectre to ngspice SPICE format
+* Pin order: Q CLK D RESET_B VDD VSS
+* 
+* NOTE: sg13_lv_nmos and sg13_lv_pmos are SUBCIRCUITS in IHP PDK
+*       Must use X prefix, not M prefix!
+* ============================================================================
+* 
+* NODE NAME MAPPING:
+*   \N\:name -> name_N  (e.g., \6\:Db -> Db_6, \1\:VSS -> VSS_1)
+*   Plain names unchanged (e.g., net10 -> net10)
+*
+* ELEMENT COUNT:
+*   NMOS: 16
+*   PMOS: 16
+*   Capacitors: 97
+*   Resistors: 88
+*   TOTAL: 217
+* ============================================================================
+
+.SUBCKT sg13g2_dfrbpq_1 Q CLK D RESET_B VDD VSS
+
+* ===== NMOS DEVICES (16) =====
+
+* N0 (\6\:Db \6\:D net10 \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN0 Db_6 D_6 net10 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N1 (net10 \8\:RESET_B \7\:VSS \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN1 net10 RESET_B_8 VSS_7 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N10 (net8 \7\:RESET_B \10\:VSS \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN10 net8 RESET_B_7 VSS_10 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N9 (\2\:net9 \3\:net4 net8 \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN9 net9_2 net4_3 net8 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N7 (Db \4\:clkneg \8\:net6 \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN7 Db clkneg_4 net6_8 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N8 (\8\:net6 \3\:clkpos net9 \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN8 net6_8 clkpos_3 net9 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N14 (\3\:net5 \13\:clkneg \2\:net12 \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN14 net5_3 clkneg_13 net12_2 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N13 (net12 \3\:net2 \9\:VSS \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN13 net12 net2_3 VSS_9 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N16 (net11 \11\:RESET_B \9\:VSS \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN16 net11 RESET_B_11 VSS_9 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N15 (\4\:net2 \7\:net5 net11 \1\:VSS) sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+XN15 net2_4 net5_7 net11 VSS_1 sg13_lv_nmos w=4.2e-07 l=1.3e-07 m=1
+
+* N11 (\10\:net4 net6 \7\:VSS \1\:VSS) sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+XN11 net4_10 net6 VSS_7 VSS_1 sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+
+* N3 (\8\:clkpos \3\:clkneg \1\:VSS \1\:VSS) sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+XN3 clkpos_8 clkneg_3 VSS_1 VSS_1 sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+
+* N2 (\10\:clkneg \3\:CLK \1\:VSS \1\:VSS) sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+XN2 clkneg_10 CLK_3 VSS_1 VSS_1 sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+
+* N12 (\9\:net4 \10\:clkpos \3\:net5 \1\:VSS) sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+XN12 net4_9 clkpos_10 net5_3 VSS_1 sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+
+* N5 (net1 \8\:net5 \8\:VSS \1\:VSS) sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+XN5 net1 net5_8 VSS_8 VSS_1 sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+
+* N4 (\3\:Q \6\:net1 \8\:VSS \1\:VSS) sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+XN4 Q_3 net1_6 VSS_8 VSS_1 sg13_lv_nmos w=7.4e-07 l=1.3e-07 m=1
+
+* ===== PMOS DEVICES (16) =====
+
+* P1 (\4\:Db \4\:D \10\:VDD VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP1 Db_4 D_4 VDD_10 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P0 (\4\:Db \9\:RESET_B \8\:VDD VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP0 Db_4 RESET_B_9 VDD_8 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P10 (\9\:net6 \5\:RESET_B \7\:VDD VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP10 net6_9 RESET_B_5 VDD_7 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P8 (net7 net4 \7\:VDD VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP8 net7 net4 VDD_7 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P9 (\5\:net6 \5\:clkneg net7 VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP9 net6_5 clkneg_5 net7 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P7 (\2\:Db \4\:clkpos \5\:net6 VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP7 Db_2 clkpos_4 net6_5 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P14 (net5 \9\:clkpos net3 VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP14 net5 clkpos_9 net3 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P13 (net3 net2 \1\:VDD VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP13 net3 net2 VDD_1 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P16 (\6\:net2 \10\:RESET_B \1\:VDD VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP16 net2_6 RESET_B_10 VDD_1 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P15 (\6\:net2 \9\:net5 \1\:VDD VDD) sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+XP15 net2_6 net5_9 VDD_1 VDD sg13_lv_pmos w=4.2e-07 l=1.3e-07 m=1
+
+* P11 (\8\:net4 \3\:net6 \8\:VDD VDD) sg13_lv_pmos w=1e-06 l=1.3e-07 m=1
+XP11 net4_8 net6_3 VDD_8 VDD sg13_lv_pmos w=1e-06 l=1.3e-07 m=1
+
+* P12 (\4\:net4 \11\:clkneg net5 VDD) sg13_lv_pmos w=1e-06 l=1.3e-07 m=1
+XP12 net4_4 clkneg_11 net5 VDD sg13_lv_pmos w=1e-06 l=1.3e-07 m=1
+
+* P3 (\6\:clkpos clkneg \1\:VDD VDD) sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+XP3 clkpos_6 clkneg VDD_1 VDD sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+
+* P2 (\7\:clkneg \1\:CLK \1\:VDD VDD) sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+XP2 clkneg_7 CLK_1 VDD_1 VDD sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+
+* P5 (\3\:net1 \5\:net5 \6\:VDD VDD) sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+XP5 net1_3 net5_5 VDD_6 VDD sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+
+* P4 (\1\:Q \5\:net1 \6\:VDD VDD) sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+XP4 Q_1 net1_5 VDD_6 VDD sg13_lv_pmos w=1.12e-06 l=1.3e-07 m=1
+
+* ===== PARASITIC CAPACITORS (97) =====
+
+* C1 (CLK VSS) capacitor c=5.77812e-18
+C1 CLK VSS 5.77812e-18
+
+* C2 (D VSS) capacitor c=4.36286e-18
+C2 D VSS 4.36286e-18
+
+* C3 (Q VSS) capacitor c=8.30554e-18
+C3 Q VSS 8.30554e-18
+
+* C4 (RESET_B VSS) capacitor c=6.96199e-18
+C4 RESET_B VSS 6.96199e-18
+
+* C5 (VDD VSS) capacitor c=2.73885e-16
+C5 VDD VSS 2.73885e-16
+
+* C6 (Db VSS) capacitor c=1.18603e-17
+C6 Db VSS 1.18603e-17
+
+* C7 (net4 VSS) capacitor c=7.24509e-17
+C7 net4 VSS 7.24509e-17
+
+* C8 (net6 VSS) capacitor c=6.38471e-17
+C8 net6 VSS 6.38471e-17
+
+* C9 (clkneg VSS) capacitor c=2.53076e-17
+C9 clkneg VSS 2.53076e-17
+
+* C10 (clkpos VSS) capacitor c=9.32025e-17
+C10 clkpos VSS 9.32025e-17
+
+* C11 (net5 VSS) capacitor c=5.23867e-18
+C11 net5 VSS 5.23867e-18
+
+* C12 (net2 VSS) capacitor c=3.56416e-17
+C12 net2 VSS 3.56416e-17
+
+* C13 (net1 VSS) capacitor c=6.96977e-18
+C13 net1 VSS 6.96977e-18
+
+* C14 (net9 VSS) capacitor c=1.32661e-16
+C14 net9 VSS 1.32661e-16
+
+* C15 (net12 VSS) capacitor c=9.23503e-18
+C15 net12 VSS 9.23503e-18
+
+* C16 (\6\:net1 VSS) capacitor c=1.96839e-17
+C16 net1_6 VSS 1.96839e-17
+
+* C17 (\8\:net5 VSS) capacitor c=2.00342e-17
+C17 net5_8 VSS 2.00342e-17
+
+* C18 (\7\:net5 VSS) capacitor c=5.07771e-17
+C18 net5_7 VSS 5.07771e-17
+
+* C19 (\11\:RESET_B VSS) capacitor c=1.25973e-16
+C19 RESET_B_11 VSS 1.25973e-16
+
+* C20 (\3\:net2 VSS) capacitor c=4.5752e-17
+C20 net2_3 VSS 4.5752e-17
+
+* C21 (\10\:clkpos VSS) capacitor c=2.67145e-17
+C21 clkpos_10 VSS 2.67145e-17
+
+* C22 (\13\:clkneg VSS) capacitor c=3.26838e-17
+C22 clkneg_13 VSS 3.26838e-17
+
+* C23 (\3\:CLK VSS) capacitor c=2.43879e-17
+C23 CLK_3 VSS 2.43879e-17
+
+* C24 (\3\:clkneg VSS) capacitor c=1.16714e-16
+C24 clkneg_3 VSS 1.16714e-16
+
+* C25 (\3\:clkpos VSS) capacitor c=3.9392e-17
+C25 clkpos_3 VSS 3.9392e-17
+
+* C26 (\4\:clkneg VSS) capacitor c=2.11074e-16
+C26 clkneg_4 VSS 2.11074e-16
+
+* C27 (\3\:net4 VSS) capacitor c=8.43146e-17
+C27 net4_3 VSS 8.43146e-17
+
+* C28 (\7\:RESET_B VSS) capacitor c=9.5045e-17
+C28 RESET_B_7 VSS 9.5045e-17
+
+* C29 (\8\:RESET_B VSS) capacitor c=1.16941e-16
+C29 RESET_B_8 VSS 1.16941e-16
+
+* C30 (\6\:D VSS) capacitor c=3.56548e-17
+C30 D_6 VSS 3.56548e-17
+
+* C31 (\5\:net1 VSS) capacitor c=2.76753e-17
+C31 net1_5 VSS 2.76753e-17
+
+* C32 (\5\:net5 VSS) capacitor c=3.39806e-17
+C32 net5_5 VSS 3.39806e-17
+
+* C33 (\9\:net5 VSS) capacitor c=2.74509e-17
+C33 net5_9 VSS 2.74509e-17
+
+* C34 (\10\:RESET_B VSS) capacitor c=9.21017e-17
+C34 RESET_B_10 VSS 9.21017e-17
+
+* C35 (\9\:clkpos VSS) capacitor c=3.75158e-17
+C35 clkpos_9 VSS 3.75158e-17
+
+* C36 (\11\:clkneg VSS) capacitor c=1.89907e-17
+C36 clkneg_11 VSS 1.89907e-17
+
+* C37 (\1\:CLK VSS) capacitor c=1.8643e-17
+C37 CLK_1 VSS 1.8643e-17
+
+* C38 (\4\:clkpos VSS) capacitor c=4.20608e-17
+C38 clkpos_4 VSS 4.20608e-17
+
+* C39 (\5\:clkneg VSS) capacitor c=9.12675e-17
+C39 clkneg_5 VSS 9.12675e-17
+
+* C40 (\5\:RESET_B VSS) capacitor c=5.29479e-17
+C40 RESET_B_5 VSS 5.29479e-17
+
+* C41 (\3\:net6 VSS) capacitor c=3.68934e-17
+C41 net6_3 VSS 3.68934e-17
+
+* C42 (\9\:RESET_B VSS) capacitor c=1.06577e-16
+C42 RESET_B_9 VSS 1.06577e-16
+
+* C43 (\4\:D VSS) capacitor c=2.35199e-17
+C43 D_4 VSS 2.35199e-17
+
+* C44 (\4\:net1 VSS) capacitor c=9.1204e-17
+C44 net1_4 VSS 9.1204e-17
+
+* C45 (\4\:net5 VSS) capacitor c=1.8987e-16
+C45 net5_4 VSS 1.8987e-16
+
+* C46 (\12\:RESET_B VSS) capacitor c=9.10099e-17
+C46 RESET_B_12 VSS 9.10099e-17
+
+* C47 (\2\:net2 VSS) capacitor c=1.43963e-16
+C47 net2_2 VSS 1.43963e-16
+
+* C48 (\5\:clkpos VSS) capacitor c=1.28705e-16
+C48 clkpos_5 VSS 1.28705e-16
+
+* C49 (\6\:clkneg VSS) capacitor c=1.23377e-16
+C49 clkneg_6 VSS 1.23377e-16
+
+* C50 (\2\:CLK VSS) capacitor c=7.88947e-17
+C50 CLK_2 VSS 7.88947e-17
+
+* C51 (\2\:clkneg VSS) capacitor c=6.42478e-17
+C51 clkneg_2 VSS 6.42478e-17
+
+* C52 (\4\:RESET_B VSS) capacitor c=3.21118e-16
+C52 RESET_B_4 VSS 3.21118e-16
+
+* C53 (\2\:net4 VSS) capacitor c=2.08593e-16
+C53 net4_2 VSS 2.08593e-16
+
+* C54 (\3\:RESET_B VSS) capacitor c=1.86667e-16
+C54 RESET_B_3 VSS 1.86667e-16
+
+* C55 (\4\:net6 VSS) capacitor c=3.08755e-18
+C55 net6_4 VSS 3.08755e-18
+
+* C56 (\3\:D VSS) capacitor c=4.3605e-17
+C56 D_3 VSS 4.3605e-17
+
+* C57 (\1\:VDD VSS) capacitor c=9.98251e-17
+C57 VDD_1 VSS 9.98251e-17
+
+* C58 (\6\:VDD VSS) capacitor c=2.5482e-18
+C58 VDD_6 VSS 2.5482e-18
+
+* C59 (\3\:net1 VSS) capacitor c=1.21066e-18
+C59 net1_3 VSS 1.21066e-18
+
+* C60 (\3\:Q VSS) capacitor c=4.95871e-17
+C60 Q_3 VSS 4.95871e-17
+
+* C61 (\4\:net2 VSS) capacitor c=3.89499e-17
+C61 net2_4 VSS 3.89499e-17
+
+* C62 (\6\:net2 VSS) capacitor c=3.13012e-18
+C62 net2_6 VSS 3.13012e-18
+
+* C63 (\9\:net4 VSS) capacitor c=9.5307e-19
+C63 net4_9 VSS 9.5307e-19
+
+* C64 (\3\:net5 VSS) capacitor c=4.86242e-19
+C64 net5_3 VSS 4.86242e-19
+
+* C65 (\2\:net12 VSS) capacitor c=3.52651e-17
+C65 net12_2 VSS 3.52651e-17
+
+* C66 (\10\:clkneg VSS) capacitor c=2.03034e-17
+C66 clkneg_10 VSS 2.03034e-17
+
+* C67 (\4\:net4 VSS) capacitor c=4.27259e-17
+C67 net4_4 VSS 4.27259e-17
+
+* C68 (\7\:clkneg VSS) capacitor c=2.40566e-18
+C68 clkneg_7 VSS 2.40566e-18
+
+* C69 (\8\:clkpos VSS) capacitor c=4.67398e-17
+C69 clkpos_8 VSS 4.67398e-17
+
+* C70 (\8\:net6 VSS) capacitor c=2.85069e-18
+C70 net6_8 VSS 2.85069e-18
+
+* C71 (\2\:net9 VSS) capacitor c=1.07174e-16
+C71 net9_2 VSS 1.07174e-16
+
+* C72 (\10\:net4 VSS) capacitor c=1.60342e-17
+C72 net4_10 VSS 1.60342e-17
+
+* C73 (\6\:Db VSS) capacitor c=3.46678e-18
+C73 Db_6 VSS 3.46678e-18
+
+* C74 (\6\:clkpos VSS) capacitor c=1.40562e-17
+C74 clkpos_6 VSS 1.40562e-17
+
+* C75 (\2\:Db VSS) capacitor c=5.6569e-17
+C75 Db_2 VSS 5.6569e-17
+
+* C76 (\5\:net6 VSS) capacitor c=3.73739e-18
+C76 net6_5 VSS 3.73739e-18
+
+* C77 (\7\:VDD VSS) capacitor c=1.14194e-18
+C77 VDD_7 VSS 1.14194e-18
+
+* C78 (\8\:net4 VSS) capacitor c=2.9905e-18
+C78 net4_8 VSS 2.9905e-18
+
+* C79 (\8\:VDD VSS) capacitor c=3.441e-17
+C79 VDD_8 VSS 3.441e-17
+
+* C80 (\4\:Db VSS) capacitor c=7.96206e-18
+C80 Db_4 VSS 7.96206e-18
+
+* C81 (\10\:VDD VSS) capacitor c=4.86087e-18
+C81 VDD_10 VSS 4.86087e-18
+
+* C82 (\5\:D VSS) capacitor c=9.87365e-17
+C82 D_5 VSS 9.87365e-17
+
+* C83 (\2\:net6 VSS) capacitor c=8.82849e-17
+C83 net6_2 VSS 8.82849e-17
+
+* C84 (\6\:net6 VSS) capacitor c=2.1839e-17
+C84 net6_6 VSS 2.1839e-17
+
+* C85 (\7\:net6 VSS) capacitor c=1.90634e-17
+C85 net6_7 VSS 1.90634e-17
+
+* C86 (\2\:clkpos VSS) capacitor c=8.50771e-17
+C86 clkpos_2 VSS 8.50771e-17
+
+* C87 (\9\:clkneg VSS) capacitor c=5.76939e-18
+C87 clkneg_9 VSS 5.76939e-18
+
+* C88 (\12\:clkneg VSS) capacitor c=5.98523e-17
+C88 clkneg_12 VSS 5.98523e-17
+
+* C89 (\5\:net4 VSS) capacitor c=4.90705e-16
+C89 net4_5 VSS 4.90705e-16
+
+* C90 (\6\:net4 VSS) capacitor c=3.42348e-16
+C90 net4_6 VSS 3.42348e-16
+
+* C91 (\7\:net4 VSS) capacitor c=1.91813e-17
+C91 net4_7 VSS 1.91813e-17
+
+* C92 (\2\:net5 VSS) capacitor c=4.77931e-17
+C92 net5_2 VSS 4.77931e-17
+
+* C93 (\5\:net2 VSS) capacitor c=2.22352e-17
+C93 net2_5 VSS 2.22352e-17
+
+* C94 (\6\:net5 VSS) capacitor c=1.24971e-16
+C94 net5_6 VSS 1.24971e-16
+
+* C95 (\2\:net1 VSS) capacitor c=3.84366e-17
+C95 net1_2 VSS 3.84366e-17
+
+* C96 (\2\:VDD VSS) capacitor c=4.0986e-19
+C96 VDD_2 VSS 4.0986e-19
+
+* C97 (\3\:VDD VSS) capacitor c=2.77944e-17
+C97 VDD_3 VSS 2.77944e-17
+
+* ===== PARASITIC RESISTORS (88) =====
+
+* Rg18 (CLK \4\:CLK) resistor r=0.01019
+Rg18 CLK CLK_4 0.01019
+
+* Rg19 (\2\:CLK \4\:CLK) resistor r=15
+Rg19 CLK_2 CLK_4 15
+
+* Rg1 (D \1\:D) resistor r=0.004024
+Rg1 D D_1 0.004024
+
+* Rg2 (\2\:D \3\:D) resistor r=0.004024
+Rg2 D_2 D_3 0.004024
+
+* Rg3 (\1\:D \2\:D) resistor r=0.02391
+Rg3 D_1 D_2 0.02391
+
+* Rg48 (Q \3\:Q) resistor r=8.2427
+Rg48 Q Q_3 8.2427
+
+* Rg47 (\2\:Q Q) resistor r=0.002651
+Rg47 Q_2 Q 0.002651
+
+* Rg49 (\1\:Q \2\:Q) resistor r=5
+Rg49 Q_1 Q_2 5
+
+* Rg37 (\12\:RESET_B \4\:RESET_B) resistor r=3.4023
+Rg37 RESET_B_12 RESET_B_4 3.4023
+
+* Rg4 (RESET_B \1\:RESET_B) resistor r=0.009545
+Rg4 RESET_B RESET_B_1 0.009545
+
+* Rg5 (\2\:RESET_B \3\:RESET_B) resistor r=0.009545
+Rg5 RESET_B_2 RESET_B_3 0.009545
+
+* Rg6 (\1\:RESET_B \2\:RESET_B) resistor r=0.05198
+Rg6 RESET_B_1 RESET_B_2 0.05198
+
+* Rg50 (\1\:VDD \2\:VDD) resistor r=15.1994
+Rg50 VDD_1 VDD_2 15.1994
+
+* Rg55 (\2\:VDD \6\:VDD) resistor r=5.4268
+Rg55 VDD_2 VDD_6 5.4268
+
+* Rg56 (\3\:VDD \1\:VDD) resistor r=5.3875
+Rg56 VDD_3 VDD_1 5.3875
+
+* Rg51 (\2\:VDD \3\:VDD) resistor r=0.2893
+Rg51 VDD_2 VDD_3 0.2893
+
+* Rg53 (\4\:VDD VDD) resistor r=1.1812
+Rg53 VDD_4 VDD 1.1812
+
+* Rg60 (\1\:VDD \4\:VDD) resistor r=1.1538
+Rg60 VDD_1 VDD_4 1.1538
+
+* Rg52 (\3\:VDD \4\:VDD) resistor r=0.3437
+Rg52 VDD_3 VDD_4 0.3437
+
+* Rg54 (VDD \5\:VDD) resistor r=0.3787
+Rg54 VDD VDD_5 0.3787
+
+* Rg61 (\1\:VDD \5\:VDD) resistor r=1.1538
+Rg61 VDD_1 VDD_5 1.1538
+
+* Rg57 (\5\:VDD \7\:VDD) resistor r=15.4238
+Rg57 VDD_5 VDD_7 15.4238
+
+* Rg62 (\8\:VDD \9\:VDD) resistor r=15
+Rg62 VDD_8 VDD_9 15
+
+* Rg59 (\9\:VDD \10\:VDD) resistor r=15.3512
+Rg59 VDD_9 VDD_10 15.3512
+
+* Rg58 (\5\:VDD \9\:VDD) resistor r=0.8751
+Rg58 VDD_5 VDD_9 0.8751
+
+* Rg63 (\1\:VSS \2\:VSS) resistor r=15.1994
+Rg63 VSS_1 VSS_2 15.1994
+
+* Rg70 (\2\:VSS \8\:VSS) resistor r=7.8126
+Rg70 VSS_2 VSS_8 7.8126
+
+* Rg71 (\3\:VSS \9\:VSS) resistor r=15.2406
+Rg71 VSS_3 VSS_9 15.2406
+
+* Rg64 (\2\:VSS \3\:VSS) resistor r=0.5525
+Rg64 VSS_2 VSS_3 0.5525
+
+* Rg66 (\4\:VSS VSS) resistor r=0.6475
+Rg66 VSS_4 VSS 0.6475
+
+* Rg73 (\1\:VSS \4\:VSS) resistor r=1.1538
+Rg73 VSS_1 VSS_4 1.1538
+
+* Rg65 (\3\:VSS \4\:VSS) resistor r=0.08061
+Rg65 VSS_3 VSS_4 0.08061
+
+* Rg67 (VSS \5\:VSS) resistor r=0.9125
+Rg67 VSS VSS_5 0.9125
+
+* Rg74 (\1\:VSS \5\:VSS) resistor r=1.1538
+Rg74 VSS_1 VSS_5 1.1538
+
+* Rg72 (\6\:VSS \10\:VSS) resistor r=15.2681
+Rg72 VSS_6 VSS_10 15.2681
+
+* Rg69 (\6\:VSS \7\:VSS) resistor r=15.5271
+Rg69 VSS_6 VSS_7 15.5271
+
+* Rg68 (\5\:VSS \6\:VSS) resistor r=0.1869
+Rg68 VSS_5 VSS_6 0.1869
+
+* Rg12 (Db \3\:Db) resistor r=16.6313
+Rg12 Db Db_3 16.6313
+
+* Rg15 (\2\:Db \3\:Db) resistor r=15
+Rg15 Db_2 Db_3 15
+
+* Rg14 (\5\:Db \6\:Db) resistor r=16.2355
+Rg14 Db_5 Db_6 16.2355
+
+* Rg16 (\4\:Db \5\:Db) resistor r=15
+Rg16 Db_4 Db_5 15
+
+* Rg13 (\3\:Db \5\:Db) resistor r=3.5743
+Rg13 Db_3 Db_5 3.5743
+
+* Rg33 (\5\:net4 \9\:net4) resistor r=15.9348
+Rg33 net4_5 net4_9 15.9348
+
+* Rg29 (\4\:net4 \5\:net4) resistor r=16.386
+Rg29 net4_4 net4_5 16.386
+
+* Rg34 (\6\:net4 \2\:net4) resistor r=15.4934
+Rg34 net4_6 net4_2 15.4934
+
+* Rg30 (\5\:net4 \6\:net4) resistor r=3.3345
+Rg30 net4_5 net4_6 3.3345
+
+* Rg35 (\7\:net4 \10\:net4) resistor r=15.0806
+Rg35 net4_7 net4_10 15.0806
+
+* Rg32 (\7\:net4 \8\:net4) resistor r=16.4649
+Rg32 net4_7 net4_8 16.4649
+
+* Rg31 (\6\:net4 \7\:net4) resistor r=0.6336
+Rg31 net4_6 net4_7 0.6336
+
+* Rg10 (\6\:net6 \8\:net6) resistor r=15.2971
+Rg10 net6_6 net6_8 15.2971
+
+* Rg7 (\5\:net6 \6\:net6) resistor r=15.2196
+Rg7 net6_5 net6_6 15.2196
+
+* Rg9 (\7\:net6 \4\:net6) resistor r=0.5275
+Rg9 net6_7 net6_4 0.5275
+
+* Rg11 (\7\:net6 \9\:net6) resistor r=15.2851
+Rg11 net6_7 net6_9 15.2851
+
+* Rg8 (\6\:net6 \7\:net6) resistor r=1.0254
+Rg8 net6_6 net6_7 1.0254
+
+* Rg20 (\6\:clkneg \8\:clkneg) resistor r=15.201
+Rg20 clkneg_6 clkneg_8 15.201
+
+* Rg24 (\7\:clkneg \8\:clkneg) resistor r=15
+Rg24 clkneg_7 clkneg_8 15
+
+* Rg22 (\9\:clkneg \2\:clkneg) resistor r=15.07
+Rg22 clkneg_9 clkneg_2 15.07
+
+* Rg23 (\9\:clkneg \10\:clkneg) resistor r=15.8964
+Rg23 clkneg_9 clkneg_10 15.8964
+
+* Rg21 (\8\:clkneg \9\:clkneg) resistor r=0.6221
+Rg21 clkneg_8 clkneg_9 0.6221
+
+* Rg25 (\5\:clkpos \7\:clkpos) resistor r=17.4417
+Rg25 clkpos_5 clkpos_7 17.4417
+
+* Rg27 (\7\:clkpos clkpos) resistor r=0.1562
+Rg27 clkpos_7 clkpos 0.1562
+
+* Rg26 (\7\:clkpos \8\:clkpos) resistor r=15.5911
+Rg26 clkpos_7 clkpos_8 15.5911
+
+* Rg28 (\6\:clkpos \7\:clkpos) resistor r=7.5
+Rg28 clkpos_6 clkpos_7 7.5
+
+* Rg40 (\2\:net5 \4\:net5) resistor r=15.9236
+Rg40 net5_2 net5_4 15.9236
+
+* Rg39 (\2\:net5 \3\:net5) resistor r=15.5733
+Rg39 net5_2 net5_3 15.5733
+
+* Rg38 (net5 \2\:net5) resistor r=15.6847
+Rg38 net5 net5_2 15.6847
+
+* Rg42 (\5\:net2 \2\:net2) resistor r=15.5303
+Rg42 net2_5 net2_2 15.5303
+
+* Rg41 (\4\:net2 \5\:net2) resistor r=16.1036
+Rg41 net2_4 net2_5 16.1036
+
+* Rg43 (\5\:net2 \6\:net2) resistor r=15.1419
+Rg43 net2_5 net2_6 15.1419
+
+* Rg46 (\2\:net1 \4\:net1) resistor r=15.3075
+Rg46 net1_2 net1_4 15.3075
+
+* Rg45 (\2\:net1 \3\:net1) resistor r=5.4292
+Rg45 net1_2 net1_3 5.4292
+
+* Rg44 (net1 \2\:net1) resistor r=7.7959
+Rg44 net1 net1_2 7.7959
+
+* Rg17 (net9 \2\:net9) resistor r=31.3483
+Rg17 net9 net9_2 31.3483
+
+* Rg36 (net12 \2\:net12) resistor r=31.1734
+Rg36 net12 net12_2 31.1734
+
+* Rh23 (\2\:CLK \3\:CLK) resistor r=10.2856
+Rh23 CLK_2 CLK_3 10.2856
+
+* Rh22 (\1\:CLK \2\:CLK) resistor r=13.2471
+Rh22 CLK_1 CLK_2 13.2471
+
+* Rh3 (\5\:D \6\:D) resistor r=32.3538
+Rh3 D_5 D_6 32.3538
+
+* Rh1 (\4\:D \5\:D) resistor r=29.123
+Rh1 D_4 D_5 29.123
+
+* Rh2 (\5\:D \3\:D) resistor r=16.7627
+Rh2 D_5 D_3 16.7627
+
+* Rh12 (\7\:RESET_B \8\:RESET_B) resistor r=112.788
+Rh12 RESET_B_7 RESET_B_8 112.788
+
+* Rh31 (\10\:RESET_B \11\:RESET_B) resistor r=62.1923
+Rh31 RESET_B_10 RESET_B_11 62.1923
+
+* Rh13 (\8\:RESET_B \9\:RESET_B) resistor r=58.2165
+Rh13 RESET_B_8 RESET_B_9 58.2165
+
+* Rh32 (\10\:RESET_B \12\:RESET_B) resistor r=41.4394
+Rh32 RESET_B_10 RESET_B_12 41.4394
+
+* Rh9 (\4\:RESET_B \5\:RESET_B) resistor r=165.521
+Rh9 RESET_B_4 RESET_B_5 165.521
+
+* Rh11 (\6\:RESET_B \7\:RESET_B) resistor r=38.721
+Rh11 RESET_B_6 RESET_B_7 38.721
+
+* Rh10 (\5\:RESET_B \6\:RESET_B) resistor r=34.9624
+Rh10 RESET_B_5 RESET_B_6 34.9624
+
+* Rh14 (\3\:RESET_B \6\:RESET_B) resistor r=15
+Rh14 RESET_B_3 RESET_B_6 15
+
+* Rh8 (\2\:net4 \3\:net4) resistor r=36.6702
+Rh8 net4_2 net4_3 36.6702
+
+* Rh7 (net4 \2\:net4) resistor r=38.1582
+Rh7 net4 net4_2 38.1582
+
+* Rh4 (net6 \2\:net6) resistor r=15.4014
+Rh4 net6 net6_2 15.4014
+
+* Rh5 (\2\:net6 \3\:net6) resistor r=16.0783
+Rh5 net6_2 net6_3 16.0783
+
+* Rh6 (\2\:net6 \4\:net6) resistor r=15.5961
+Rh6 net6_2 net6_4 15.5961
+
+* Rh20 (\3\:clkneg \4\:clkneg) resistor r=154.252
+Rh20 clkneg_3 clkneg_4 154.252
+
+* Rh21 (\4\:clkneg \5\:clkneg) resistor r=40.1154
+Rh21 clkneg_4 clkneg_5 40.1154
+
+* Rh19 (\2\:clkneg \3\:clkneg) resistor r=10.2856
+Rh19 clkneg_2 clkneg_3 10.2856
+
+* Rh18 (clkneg \2\:clkneg) resistor r=13.2471
+Rh18 clkneg clkneg_2 13.2471
+
+* Rh26 (\12\:clkneg \13\:clkneg) resistor r=30.3206
+Rh26 clkneg_12 clkneg_13 30.3206
+
+* Rh24 (\11\:clkneg \12\:clkneg) resistor r=16.3913
+Rh24 clkneg_11 clkneg_12 16.3913
+
+* Rh25 (\12\:clkneg \6\:clkneg) resistor r=19.9216
+Rh25 clkneg_12 clkneg_6 19.9216
+
+* Rh28 (\5\:clkpos \10\:clkpos) resistor r=9.7471
+Rh28 clkpos_5 clkpos_10 9.7471
+
+* Rh27 (\9\:clkpos \5\:clkpos) resistor r=33.2418
+Rh27 clkpos_9 clkpos_5 33.2418
+
+* Rh16 (\2\:clkpos \3\:clkpos) resistor r=31.1726
+Rh16 clkpos_2 clkpos_3 31.1726
+
+* Rh17 (\2\:clkpos \4\:clkpos) resistor r=8.288
+Rh17 clkpos_2 clkpos_4 8.288
+
+* Rh15 (clkpos \2\:clkpos) resistor r=40.6615
+Rh15 clkpos clkpos_2 40.6615
+
+* Rh35 (\4\:net5 \7\:net5) resistor r=21.324
+Rh35 net5_4 net5_7 21.324
+
+* Rh37 (\4\:net5 \9\:net5) resistor r=30.7169
+Rh37 net5_4 net5_9 30.7169
+
+* Rh36 (\6\:net5 \8\:net5) resistor r=12.0866
+Rh36 net5_6 net5_8 12.0866
+
+* Rh33 (\5\:net5 \6\:net5) resistor r=27.4328
+Rh33 net5_5 net5_6 27.4328
+
+* Rh34 (\6\:net5 \4\:net5) resistor r=44.053
+Rh34 net5_6 net5_4 44.053
+
+* Rh30 (\2\:net2 \3\:net2) resistor r=39.3625
+Rh30 net2_2 net2_3 39.3625
+
+* Rh29 (net2 \2\:net2) resistor r=12.1702
+Rh29 net2 net2_2 12.1702
+
+* Rh39 (\4\:net1 \6\:net1) resistor r=10.0163
+Rh39 net1_4 net1_6 10.0163
+
+* Rh38 (\5\:net1 \4\:net1) resistor r=19.7086
+Rh38 net1_5 net1_4 19.7086
+
+.ENDS sg13g2_dfrbpq_1

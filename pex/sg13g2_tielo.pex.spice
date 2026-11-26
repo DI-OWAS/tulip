@@ -1,0 +1,21 @@
+* NGSPICE file created from sg13g2_tielo_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_tielo_flat L_LO VDD VSS
+X0 L_LO a_223_58# VSS VSS sg13_lv_nmos ad=0.2992p pd=2.44u as=0.30542p ps=2.07u w=0.88u l=0.13u
+X1 VDD a_59_418# a_59_418# VDD sg13_lv_pmos ad=0.32692p pd=2.255u as=0.102p ps=1.28u w=0.3u l=0.13u
+X2 a_223_58# a_59_195# VDD VDD sg13_lv_pmos ad=0.3553p pd=2.77u as=0.32692p ps=2.255u w=1.045u l=0.13u
+X3 VSS a_59_418# a_59_195# VSS sg13_lv_nmos ad=0.30542p pd=2.07u as=0.1309p ps=1.45u w=0.385u l=0.13u
+C0 a_223_58# VDD 0.05827f
+C1 a_59_418# a_59_195# 0.05669f
+C2 L_LO a_59_195# 0.05016f
+C3 a_223_58# a_59_418# 0.04215f
+C4 L_LO a_223_58# 0.05962f
+C5 a_223_58# a_59_195# 0.14333f
+C6 VDD a_59_418# 0.1202f
+C7 VDD a_59_195# 0.10378f
+C8 L_LO VSS 0.13164f
+C9 VDD VSS 0.117f
+C10 a_223_58# VSS 0.22219f $ **FLOATING
+C11 a_59_418# VSS 0.17471f $ **FLOATING
+C12 a_59_195# VSS 0.2316f $ **FLOATING
+.ends

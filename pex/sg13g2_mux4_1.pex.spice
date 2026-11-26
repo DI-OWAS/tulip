@@ -1,0 +1,94 @@
+* NGSPICE file created from sg13g2_mux4_1_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_mux4_1_flat X A1 A2 S0 VDD VSS S1 A0 A3
+X0 a_886_118# a_71_118# a_810_118# VSS sg13_lv_nmos ad=0.1776p pd=1.195u as=80f ps=0.89u w=0.64u l=0.13u
+X1 VDD S0 a_71_118# VDD sg13_lv_pmos ad=0.22315p pd=1.555u as=0.34p ps=2.68u w=1u l=0.13u
+X2 X a_1377_160# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1543p ps=1.18u w=0.74u l=0.13u
+X3 X a_1377_160# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.34367p ps=1.775u w=1.12u l=0.13u
+X4 a_1023_118# S0 a_886_118# VSS sg13_lv_nmos ad=76.8f pd=0.88u as=0.1776p ps=1.195u w=0.64u l=0.13u
+X5 VSS S1 a_1453_124# VSS sg13_lv_nmos ad=0.1543p pd=1.18u as=0.2304p ps=2u w=0.64u l=0.13u
+X6 VSS A3 a_1023_118# VSS sg13_lv_nmos ad=0.2176p pd=1.96u as=76.8f ps=0.88u w=0.64u l=0.13u
+X7 VSS S0 a_71_118# VSS sg13_lv_nmos ad=0.1872p pd=1.225u as=0.2176p ps=1.96u w=0.64u l=0.13u
+X8 a_810_118# A2 VSS VSS sg13_lv_nmos ad=80f pd=0.89u as=0.1824p ps=1.21u w=0.64u l=0.13u
+X9 a_886_118# S0 a_805_385# VDD sg13_lv_pmos ad=0.4425p pd=1.885u as=0.20762p ps=1.605u w=1u l=0.13u
+X10 VDD S1 a_1453_124# VDD sg13_lv_pmos ad=0.34367p pd=1.775u as=0.34p ps=2.68u w=1u l=0.13u
+X11 a_382_118# S0 a_295_385# VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.415p ps=1.83u w=1u l=0.13u
+X12 a_1109_431# a_71_118# a_886_118# VDD sg13_lv_pmos ad=0.135p pd=1.27u as=0.4425p ps=1.885u w=1u l=0.13u
+X13 a_295_385# A0 VDD VDD sg13_lv_pmos ad=0.415p pd=1.83u as=0.22315p ps=1.555u w=1u l=0.13u
+X14 VDD A1 a_589_385# VDD sg13_lv_pmos ad=0.29275p pd=1.785u as=0.16p ps=1.32u w=1u l=0.13u
+X15 a_1377_160# S1 a_382_118# VDD sg13_lv_pmos ad=0.2225p pd=1.445u as=0.34p ps=2.68u w=1u l=0.13u
+X16 a_308_118# A0 VSS VSS sg13_lv_nmos ad=76.8f pd=0.88u as=0.1872p ps=1.225u w=0.64u l=0.13u
+X17 a_500_118# S0 a_382_118# VSS sg13_lv_nmos ad=0.2304p pd=1.36u as=0.1472p ps=1.1u w=0.64u l=0.13u
+X18 a_589_385# a_71_118# a_382_118# VDD sg13_lv_pmos ad=0.16p pd=1.32u as=0.19p ps=1.38u w=1u l=0.13u
+X19 a_1377_160# S1 a_886_118# VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.54188p ps=3.42u w=0.64u l=0.13u
+X20 VDD A3 a_1109_431# VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.135p ps=1.27u w=1u l=0.13u
+X21 a_382_118# a_71_118# a_308_118# VSS sg13_lv_nmos ad=0.1472p pd=1.1u as=76.8f ps=0.88u w=0.64u l=0.13u
+X22 VSS A1 a_500_118# VSS sg13_lv_nmos ad=0.1824p pd=1.21u as=0.2304p ps=1.36u w=0.64u l=0.13u
+X23 a_382_118# a_1453_124# a_1377_160# VSS sg13_lv_nmos ad=0.2176p pd=1.96u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X24 a_805_385# A2 VDD VDD sg13_lv_pmos ad=0.20762p pd=1.605u as=0.29275p ps=1.785u w=1u l=0.13u
+X25 a_886_118# a_1453_124# a_1377_160# VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.2225p ps=1.445u w=1u l=0.13u
+C0 a_382_118# a_295_385# 0.02525f
+C1 A2 VDD 0.06389f
+C2 a_382_118# a_71_118# 0.42277f
+C3 a_382_118# a_1377_160# 0.42648f
+C4 a_71_118# S0 0.35704f
+C5 A2 a_886_118# 0.01947f
+C6 A3 VDD 0.09058f
+C7 A0 a_71_118# 0.17738f
+C8 a_382_118# S0 0.0605f
+C9 S1 a_1377_160# 0.17354f
+C10 S1 a_382_118# 0.02893f
+C11 A0 a_382_118# 0.01f
+C12 A3 a_886_118# 0.21497f
+C13 a_382_118# a_1109_431# 0.01223f
+C14 A0 S0 0.14432f
+C15 VDD X 0.10163f
+C16 VDD a_295_385# 0.02402f
+C17 A2 A1 0.2448f
+C18 a_308_118# a_71_118# 0.01005f
+C19 VDD a_71_118# 0.34126f
+C20 VDD a_1377_160# 0.61377f
+C21 VDD a_382_118# 0.75918f
+C22 a_886_118# a_71_118# 0.46063f
+C23 VDD S0 0.55659f
+C24 a_886_118# a_1377_160# 0.36909f
+C25 a_382_118# a_886_118# 0.84374f
+C26 S1 VDD 0.12826f
+C27 A0 VDD 0.07059f
+C28 a_886_118# S0 0.02706f
+C29 a_1377_160# a_1453_124# 0.27693f
+C30 S1 a_886_118# 0.02649f
+C31 S1 a_1453_124# 0.23911f
+C32 A1 a_71_118# 0.14868f
+C33 A1 a_382_118# 0.1172f
+C34 A1 S0 0.01686f
+C35 VDD a_886_118# 0.03006f
+C36 VDD a_1453_124# 0.11837f
+C37 a_886_118# a_1453_124# 0.39954f
+C38 A1 VDD 0.05749f
+C39 A2 a_71_118# 0.15938f
+C40 A2 a_382_118# 0.08808f
+C41 A2 S0 0.01515f
+C42 A3 a_71_118# 0.04447f
+C43 A3 a_382_118# 0.13866f
+C44 a_382_118# a_805_385# 0.01747f
+C45 a_500_118# a_71_118# 0.0287f
+C46 a_589_385# a_382_118# 0.01834f
+C47 A3 S0 0.02476f
+C48 S1 A3 0.02331f
+C49 X a_1377_160# 0.18412f
+C50 a_71_118# a_295_385# 0.01062f
+C51 X VSS 0.29307f
+C52 A2 VSS 0.20503f
+C53 A1 VSS 0.20768f
+C54 S1 VSS 0.65995f
+C55 A3 VSS 0.28445f
+C56 A0 VSS 0.20327f
+C57 S0 VSS 0.72972f
+C58 VDD VSS 0.35838f
+C59 a_1377_160# VSS 0.29302f $ **FLOATING
+C60 a_886_118# VSS 0.68947f $ **FLOATING
+C61 a_382_118# VSS 0.01718f $ **FLOATING
+C62 a_1453_124# VSS 0.35662f $ **FLOATING
+C63 a_71_118# VSS 1.0699f $ **FLOATING
+.ends

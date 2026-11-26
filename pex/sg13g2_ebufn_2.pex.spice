@@ -1,0 +1,44 @@
+* NGSPICE file created from sg13g2_ebufn_2_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_ebufn_2_flat Z A TE_B VDD VSS
+X0 Z a_114_72# a_62_402# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X1 a_114_72# A VDD VDD sg13_lv_pmos ad=0.36p pd=2.72u as=0.28565p ps=1.655u w=1u l=0.13u
+X2 a_62_402# a_114_72# Z VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X3 VDD TE_B a_318_72# VDD sg13_lv_pmos ad=0.28565p pd=1.655u as=0.34p ps=2.68u w=1u l=0.13u
+X4 VDD TE_B a_62_402# VDD sg13_lv_pmos ad=0.3169p pd=2.03u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X5 VSS TE_B a_318_72# VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.2176p ps=1.96u w=0.64u l=0.13u
+X6 Z a_114_72# a_46_108# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X7 a_114_72# A VSS VSS sg13_lv_nmos ad=0.2176p pd=1.96u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X8 a_46_108# a_114_72# Z VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X9 a_62_402# TE_B VDD VDD sg13_lv_pmos ad=0.39835p pd=3.05u as=0.3169p ps=2.03u w=1.12u l=0.13u
+X10 VSS a_318_72# a_46_108# VSS sg13_lv_nmos ad=0.1406p pd=1.12u as=0.1406p ps=1.12u w=0.74u l=0.13u
+X11 a_46_108# a_318_72# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1406p ps=1.12u w=0.74u l=0.13u
+C0 TE_B a_318_72# 0.24489f
+C1 a_46_108# a_318_72# 0.20009f
+C2 TE_B a_114_72# 0.07736f
+C3 a_46_108# a_114_72# 0.26376f
+C4 Z a_114_72# 0.36685f
+C5 TE_B VDD 0.20681f
+C6 Z VDD 0.02174f
+C7 TE_B a_62_402# 0.02129f
+C8 a_46_108# a_62_402# 0.01111f
+C9 TE_B A 0.10964f
+C10 a_62_402# Z 0.1644f
+C11 a_114_72# a_318_72# 0.24763f
+C12 a_318_72# VDD 0.01998f
+C13 a_114_72# VDD 0.29444f
+C14 TE_B Z 0.01344f
+C15 a_46_108# Z 0.17873f
+C16 a_62_402# a_114_72# 0.18743f
+C17 A a_114_72# 0.127f
+C18 a_62_402# VDD 0.38503f
+C19 A VDD 0.0676f
+C20 A VSS 0.2661f
+C21 Z VSS 0.03838f
+C22 TE_B VSS 0.46795f
+C23 VDD VSS 0.22495f
+C24 a_46_108# VSS 0.46008f $ **FLOATING
+C25 a_318_72# VSS 0.52084f $ **FLOATING
+C26 a_62_402# VSS 0.0296f $ **FLOATING
+C27 a_114_72# VSS 0.71525f $ **FLOATING
+.ends

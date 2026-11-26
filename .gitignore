@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+results/
+debug_plots/
+curve_plots/
+ic_cache/
+*.log
+*.lib
+*.scs
+*.pex.spice
+.spiceinit
+
+# extracted cell netlists are tracked
+!pex/*.pex.spice
+
+# characterized libs shipped with Tulip
+!libs/**/*.lib

@@ -1,0 +1,18 @@
+* NGSPICE file created from sg13g2_nand2_1_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_nand2_1_flat Y VDD A VSS B
+X0 a_169_118# B VSS VSS sg13_lv_nmos ad=66.6f pd=0.92u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X1 Y A a_169_118# VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=66.6f ps=0.92u w=0.74u l=0.13u
+X2 Y B VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X3 VDD A Y VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+C0 VDD A 0.11052f
+C1 A B 0.06073f
+C2 Y VDD 0.33445f
+C3 Y B 0.08681f
+C4 Y A 0.15751f
+C5 VDD B 0.11055f
+C6 Y VSS 0.15289f
+C7 A VSS 0.28773f
+C8 B VSS 0.33985f
+C9 VDD VSS 0.18363f
+.ends

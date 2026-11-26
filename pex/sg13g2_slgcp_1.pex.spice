@@ -1,0 +1,66 @@
+* NGSPICE file created from sg13g2_slgcp_1_flat.ext - technology: ihp-sg13g2
+
+.subckt sg13g2_slgcp_1_flat GCLK SCE GATE CLK VSS VDD
+X0 a_136_156# GATE a_170_468# VDD sg13_lv_pmos ad=0.2856p pd=2.36u as=88.2f ps=1.05u w=0.84u l=0.13u
+X1 a_750_88# a_574_118# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.16905p ps=1.5u w=1.12u l=0.13u
+X2 a_776_536# a_326_82# a_574_118# VDD sg13_lv_pmos ad=44.1f pd=0.63u as=0.17837p ps=1.405u w=0.42u l=0.13u
+X3 a_1273_447# a_750_88# a_1222_138# VSS sg13_lv_nmos ad=0.2176p pd=1.96u as=59.2f ps=0.825u w=0.64u l=0.13u
+X4 a_574_118# a_352_118# a_136_156# VDD sg13_lv_pmos ad=0.17837p pd=1.405u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X5 VDD a_750_88# a_776_536# VDD sg13_lv_pmos ad=0.16905p pd=1.5u as=44.1f ps=0.63u w=0.42u l=0.13u
+X6 VDD CLK a_326_82# VDD sg13_lv_pmos ad=0.1848p pd=1.28u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X7 VSS CLK a_326_82# VSS sg13_lv_nmos ad=0.1371p pd=1.12u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X8 a_136_156# SCE VSS VSS sg13_lv_nmos ad=0.1045p pd=0.93u as=0.187p ps=1.78u w=0.55u l=0.13u
+X9 GCLK a_1273_447# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.2664p ps=2.2u w=0.74u l=0.13u
+X10 a_1273_447# CLK VDD VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.1848p ps=1.28u w=0.84u l=0.13u
+X11 VSS GATE a_136_156# VSS sg13_lv_nmos ad=0.21765p pd=1.59u as=0.1045p ps=0.93u w=0.55u l=0.13u
+X12 VDD a_750_88# a_1273_447# VDD sg13_lv_pmos ad=0.1946p pd=1.5u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X13 a_352_118# a_326_82# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.21765p ps=1.59u w=0.74u l=0.13u
+X14 a_352_118# a_326_82# VDD VDD sg13_lv_pmos ad=0.2856p pd=2.36u as=0.3978p ps=3u w=0.84u l=0.13u
+X15 GCLK a_1273_447# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.1946p ps=1.5u w=1.12u l=0.13u
+X16 a_574_118# a_326_82# a_136_156# VSS sg13_lv_nmos ad=0.1418p pd=1.12u as=0.231p ps=1.94u w=0.55u l=0.13u
+X17 a_714_124# a_352_118# a_574_118# VSS sg13_lv_nmos ad=37.8f pd=0.6u as=0.1418p ps=1.12u w=0.42u l=0.13u
+X18 a_1222_138# CLK VSS VSS sg13_lv_nmos ad=59.2f pd=0.825u as=0.1371p ps=1.12u w=0.64u l=0.13u
+X19 a_170_468# SCE VDD VDD sg13_lv_pmos ad=88.2f pd=1.05u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X20 VSS a_750_88# a_714_124# VSS sg13_lv_nmos ad=0.1544p pd=1.3u as=37.8f ps=0.6u w=0.42u l=0.13u
+X21 a_750_88# a_574_118# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1544p ps=1.3u w=0.74u l=0.13u
+C0 a_750_88# a_326_82# 0.47745f
+C1 VDD a_750_88# 0.40222f
+C2 VDD a_1273_447# 0.2578f
+C3 VDD SCE 0.1375f
+C4 a_352_118# a_574_118# 0.1214f
+C5 a_750_88# a_574_118# 0.2675f
+C6 GATE a_136_156# 0.27989f
+C7 VDD a_326_82# 0.31889f
+C8 CLK a_750_88# 0.20574f
+C9 CLK a_1273_447# 0.01304f
+C10 GCLK a_1273_447# 0.13678f
+C11 a_352_118# a_136_156# 0.51591f
+C12 a_574_118# a_326_82# 0.41198f
+C13 VDD a_574_118# 0.12528f
+C14 CLK a_326_82# 0.11656f
+C15 VDD CLK 0.15972f
+C16 VDD GCLK 0.18996f
+C17 SCE a_136_156# 0.0588f
+C18 GATE SCE 0.11735f
+C19 a_352_118# a_750_88# 0.08491f
+C20 CLK a_574_118# 0.01496f
+C21 a_136_156# a_326_82# 0.12916f
+C22 GATE a_326_82# 0.01619f
+C23 VDD a_136_156# 0.26082f
+C24 GATE VDD 0.09013f
+C25 a_1273_447# a_750_88# 0.34135f
+C26 a_136_156# a_574_118# 0.10801f
+C27 a_352_118# a_326_82# 0.26067f
+C28 VDD a_352_118# 0.09191f
+C29 GCLK VSS 0.19081f
+C30 CLK VSS 0.44324f
+C31 GATE VSS 0.18236f
+C32 SCE VSS 0.26261f
+C33 VDD VSS 0.2984f
+C34 a_1273_447# VSS 0.49641f $ **FLOATING
+C35 a_574_118# VSS 0.26463f $ **FLOATING
+C36 a_750_88# VSS 0.47373f $ **FLOATING
+C37 a_352_118# VSS 0.21492f $ **FLOATING
+C38 a_136_156# VSS 0.28472f $ **FLOATING
+C39 a_326_82# VSS 1.2294f $ **FLOATING
+.ends

@@ -1,0 +1,14 @@
+@Library("jenlib") _
+
+wafDefaultPipeline(projects: ["tulip"],
+                   container: [image: getOWASContainer()],
+                   notificationChannel: "#di-owas",
+                   enableClangFormat: false,
+                   enableClangTidy: false,
+                   enableCppcheck: false)
+
+String getOWASContainer() {
+	return getDefaultFixturePath(defaultPathCanonical: "/einc/containers/owas/stable/latest",
+	                             commitKey: "In-OWAS-Container",
+	                             parameterName: "OVERWRITE_DEFAULT_OWAS_CONTAINER_IMAGE")
+}
